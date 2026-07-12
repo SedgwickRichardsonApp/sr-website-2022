@@ -1,0 +1,83 @@
+.four-zero-four-content {
+  @apply mt-32 pb-20 md:pb-[140px];
+
+  .container {
+    @apply px-[15px] md:px-[30px];
+  }
+
+  .btn {
+    @apply w-full text-center mt-0 mb-[38.5px] py-[0.75rem] text-base font-medium;
+    
+    @screen md {
+      @apply w-auto py-2 pl-[29px] pr-[28px];
+    }
+
+    span {
+      @apply ml-[0.3125rem] md:ml-[0.625rem];
+    }
+
+    .btn-icon img {
+      @apply w-[14px];
+    }
+    
+    &:hover {
+      .btn-icon img {
+        filter: invert(1);
+      }
+    }
+
+    .content-wrap.js-bg-black & {
+      filter: invert(1);
+    }
+  }
+
+  .page-title {
+    @apply w-full md:w-[63.26vw] text-[180px] text-center mb-[52px] md:mb-[-37px];
+  }
+
+  .content-wrapper {
+    @apply w-full md:flex md:flex-wrap;
+    
+    .white-space {
+      @apply w-0 h-0 md:w-[49.2vw];
+    }
+
+    .text-wrapper {
+      @apply w-auto max-w-[552px] ml-auto relative;
+
+      .sad-face-wrapper {
+        @apply hidden absolute top-[-26px] right-[-26px];
+      }
+    }
+  }
+
+  .sorry-text {
+    @apply max-w-[321px] md:max-w-none leading-[28.8px] tracking-[-0.5px] text-2xl mb-[1.25rem] md:mb-[19.5px] md:text-[2.3125rem] md:leading-[44.4px] md:tracking-[-0.7px];
+  }
+
+  .cursor-copy {
+    cursor: none;
+  }
+
+  .email {
+    @apply block md:text-lg font-medium text-base leading-[23.2px] md:leading-[25.2px];
+
+    &.element-mobile {
+      @apply hidden;
+    }
+  }
+
+  .contact-text {
+    @apply text-[1rem] md:text-[1.125rem];
+  }
+}
+
+.mobile .four-zero-four-content .email {
+  &.element-desktop {
+    display: none;
+  }
+  
+  &.element-mobile {
+    display: block;
+  }
+}

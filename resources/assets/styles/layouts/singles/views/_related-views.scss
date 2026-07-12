@@ -1,0 +1,37 @@
+.cpt-views-related-views {
+  @apply pb-[80px] md:pb-[140px];
+  
+  .section-title {
+    @apply mt-[62px] mb-[20px] md:mt-[160px] md:mb-[28px];
+  }
+
+  h4 {
+    @apply mb-2;
+  }
+
+  .related-views-wrapper {
+    @apply mb-0 grid-cols-1;
+
+    @screen md {
+      @apply grid grid-cols-3 gap-10 mb-0;
+    }
+  }
+
+  .view-item-image-wrapper {
+    @apply block relative mb-4 overflow-hidden w-full;
+
+    padding-bottom: 70.2%;
+  }
+
+  .view-item-image {
+    @apply absolute inset-0 h-full w-full object-cover;
+  }
+
+  .view-item-title {
+    @apply text-lg leading-6 mb-0;
+
+    @screen md {
+      @apply text-[22px] leading-[29px] mt-[0.9375rem];
+    }
+  }
+}

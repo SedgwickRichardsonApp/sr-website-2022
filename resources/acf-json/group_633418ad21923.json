@@ -1,0 +1,149 @@
+{
+    "key": "group_633418ad21923",
+    "title": "Block - All",
+    "fields": [
+        {
+            "key": "field_633418f831440",
+            "label": "Margin Desktop",
+            "name": "margin_desktop",
+            "type": "group",
+            "instructions": "For screen devices that have 768px or larger",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6334191a68335",
+                    "label": "Top",
+                    "name": "top",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "6.25",
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.25",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6334195242632",
+                    "label": "Bottom",
+                    "name": "bottom",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "6.25",
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.25",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_633419b39f1fb",
+            "label": "Margin Mobile",
+            "name": "margin_mobile",
+            "type": "group",
+            "instructions": "For screen devices that are smaller than 768px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_633419b39f1fc",
+                    "label": "Top",
+                    "name": "top",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "2.5",
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.25",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_633419b39f1fd",
+                    "label": "Bottom",
+                    "name": "bottom",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "2.5",
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.25",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/read-more"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/video"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1678307850
+}

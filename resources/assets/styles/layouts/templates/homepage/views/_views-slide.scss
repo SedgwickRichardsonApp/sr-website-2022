@@ -1,0 +1,143 @@
+
+.tpl-homepage-views {
+  @apply pt-[75px] pb-[7.5rem];
+
+  @screen md {
+    @apply pt-36 pb-[200px];
+  }
+
+  .container-fluid {
+    @apply pr-0 md:pr-[30px];
+  }
+
+  .views-group-title-wrapper {
+    @apply flex justify-between items-center mb-6 px-[30px];
+
+    @screen md {
+      @apply mb-[2.9rem];
+    }
+    
+    .views-group-title {
+      @apply font-twk text-2xl tracking-[-1.9px];
+      
+      @screen md {
+        @apply text-5xl tracking-[-0.4px];
+      }
+    }
+
+    .views-group-view-all-link {
+      @apply font-tt cursor-hover text-base font-medium no-underline py-[11px] leading-4;
+
+      @screen md {
+        @apply text-base no-underline leading-5;
+      }
+
+      &.btn {
+        @apply px-5 py-[11px];
+        
+        @screen md {
+          @apply px-5 py-[14px];
+        }
+      }
+
+      .btn-label {
+        @apply mr-[10px];
+      }
+    
+      .btn-icon {
+        @apply w-[14px] h-[14px];
+      }
+
+      &:hover {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .swiper-container {
+    @apply relative pb-10 md:pb-[3.7rem] overflow-hidden pr-[15px] md:pr-0;
+  
+    .view-item-image-wrapper {
+      @apply block relative overflow-hidden w-full pb-0 pt-[70.2%];
+  
+      // aspect-ratio: 1 / 0.702;
+    }
+
+    .view-item-image,
+    .acf-video-player {
+      @apply absolute inset-0 h-full w-full object-cover bg-top object-top;
+  
+      &.iframe {
+        transform: scale(1.25);
+  
+        > div,
+        > iframe {
+          @apply absolute;
+          
+          height: 100% !important;
+        }
+      }
+    }
+  
+    .view-item-title-wrapper {
+      @apply block pt-[0.625rem] md:pt-[0.8rem];
+    }
+
+    .view-item-title {
+      @apply text-lg leading-6 mb-0;
+  
+      @screen md {
+        @apply text-[22px] leading-[29.06px] tracking-[-0.5px];
+      }
+    }
+
+    //Customize Swiper
+  
+    .swiper-scrollbar {
+      @apply rounded-none h-[2px];
+  
+      background-color: #d9d9dd;
+      max-width: calc(100vw - 30px);
+      transform: translateX(-1%);
+  
+      @screen md {
+        @apply max-w-[46.53vw] translate-x-2/4;
+      }
+    }
+  
+    .swiper-scrollbar-drag {
+      @apply bg-black-400 rounded-none;
+    }
+  }
+  
+  .swiper-button-wrapper {
+    @apply absolute inset-0 h-full w-full;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply hidden absolute top-0 h-full mt-0;
+  
+    &::after {
+      content: none;
+    }
+  }
+  
+  .swiper-button-next {
+    @apply right-0;
+  }
+  
+  .swiper-button-prev {
+    @apply left-0;
+  }
+  
+  .swiper-pagination {
+    @apply bottom-0 ;
+  
+    top: unset;
+  
+    .swiper-pagination-progressbar-fill {
+      @apply bg-black-100;
+    }
+  }
+}

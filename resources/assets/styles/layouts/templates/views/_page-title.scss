@@ -1,0 +1,11 @@
+.tpl-views-page-title {
+  @apply pt-[121px] pb-10 lg:pt-40 lg:pb-20;
+
+  .page-title {
+    @apply mb-0 capitalize tracking-[-1.9px];
+
+    @screen lg {
+      @apply font-twk text-[5.75rem] leading-[120%] -tracking-[4%];
+    }
+  }
+}

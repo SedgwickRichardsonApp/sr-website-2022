@@ -1,0 +1,125 @@
+.custom-form-content {
+  .cf-hide {
+    display: none !important;
+  }
+
+  .cf-show {
+    display: block;
+  }
+
+  .custom-form-heading {
+    @apply text-5xl mb-0;
+
+    @screen md {
+      @apply text-7xl;
+    }
+  }
+
+  .custom-form-subheading {
+    margin-top: 120px;
+
+    @screen lg {
+      @apply max-w-[80%];
+    }
+  }
+
+  .custom-form-element {
+    @apply mb-20;
+
+    @screen lg {
+      @apply mt-[120px] max-w-[38.3vw] w-full;
+    }
+
+    input[type="submit"] {
+      @apply hidden;
+    }
+
+    .submit-button-wrapper {
+      @apply mt-0;
+    }
+
+    .submit-button {
+      @apply w-full text-base md:text-lg pt-[0.468rem] pb-[0.625rem] px-[0.875rem] mt-[2.1rem] lg:mt-[3rem];
+
+      .btn-label {
+        @apply text-base;
+      }
+
+      .btn-icon {
+        @apply w-[14px] h-[14px];
+      }
+
+      @screen md {
+        @apply w-[150px];
+      }
+
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  .wpcf7-form {
+    .wpcf7-response-output {
+      @apply text-sm;
+    }
+
+    .ajax-loader,
+    .wpcf7-spinner {
+      @apply m-0 hidden;
+    }
+
+    &.submitting {
+      .ajax-loader,
+      .wpcf7-spinner {
+        @apply inline-block;
+      }
+    }
+
+    &.sent {
+      .wpcf7-response-output {
+        @apply hidden;
+      }
+    }
+  }
+
+  .custom-form-thank-you {
+    @apply flex flex-col justify-between h-full;
+
+    @screen md {
+      @apply h-auto;
+    }
+
+    &.cf-show {
+      margin: 120px 0 5rem 0;
+    }
+
+    .custom-form-thank-you-message {
+      @apply text-5xl mb-8;
+  
+      @screen md {
+        @apply text-7xl mb-10;
+      }
+    }
+
+    .home-button {
+      @apply w-full;
+  
+      @screen md {
+        @apply w-auto;
+      }
+  
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+      
+      .btn-icon {
+        @apply w-[17px];
+      }
+    }
+  }
+}

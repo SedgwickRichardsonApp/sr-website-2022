@@ -1,0 +1,43 @@
+/* Font Face
+ * @param {*} $font-family - Font family
+ * @param {path} $src - Source
+ * @param {normal|italic|oblique} $font-style - Font style
+ * @param {normal|bold|bolder|lighter|number} $font-weight - Font weight
+ */
+@mixin font-face($font-family , $src, $font-style: normal, $font-weight: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$src}.ttf") format("truetype");
+    font-style: $font-style;
+    font-weight: $font-weight;
+  }
+}
+
+@mixin font-face-woff($font-family , $src, $font-style: normal, $font-weight: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$src}.woff2") format("woff2"), url("#{$src}.woff") format("woff");
+    font-style: $font-style;
+    font-weight: $font-weight;
+  }
+}
+
+@mixin font-face-otf($font-family , $src, $font-style: normal, $font-weight: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$src}.otf") format("opentype");
+    font-style: $font-style;
+    font-weight: $font-weight;
+  }
+}
+
+@include font-face("TWK Everett", "#{$fonts}/TWKEverett/TWKEverettVN-Light", normal, 300);
+@include font-face("TWK Everett", "#{$fonts}/TWKEverett/TWKEverettVN-Regular", normal, 400);
+@include font-face("TWK Everett", "#{$fonts}/TWKEverett/TWKEverettVN-Medium", normal, 600);
+@include font-face("TWK Everett", "#{$fonts}/TWKEverett/TWKEverettVN-Bold", normal, 500);
+@include font-face("TWK Everett", "#{$fonts}/TWKEverett/TWKEverettVN-Bold", normal, 700);
+@include font-face-woff("TT Hoves Pro", "#{$fonts}/TTHovesProTrial/TT_Hoves_Pro_Regular_1", normal, 400);
+@include font-face-woff("TT Hoves Pro", "#{$fonts}/TTHovesProTrial/TT_Hoves_Pro_Medium_1", normal, 500);
+@include font-face-woff("TT Hoves Pro", "#{$fonts}/TTHovesProTrial/TT_Hoves_Pro_Bold_1", normal, 700);
+@include font-face-otf("Noto Sans SC", "#{$fonts}/NotoSansCJKSC/NotoSansSC-Regular", normal, 400);
+@include font-face-otf("Noto Sans SC", "#{$fonts}/NotoSansCJKSC/NotoSansSC-Medium", normal, 500);

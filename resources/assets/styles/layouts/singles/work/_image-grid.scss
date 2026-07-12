@@ -1,0 +1,49 @@
+.cpt-work-image-grid {
+  // .container-fluid
+  .image-grid-container {
+    .image-grid-wrapper {
+      @apply grid grid-flow-row grid-cols-6 md:gap-10 gap-5;
+
+      .image-wrap {
+        .grid-image {
+          @apply object-cover;
+        }
+
+        &.g-wrap-0 {
+          @apply col-span-6;
+
+          .grid-image {
+            @apply aspect-[1380/777];
+          }
+        }
+
+        &.g-wrap-1,
+        &.g-wrap-2 {
+          @apply col-span-3;
+
+          .grid-image {
+            @apply aspect-square md:aspect-[670/650];
+          }
+        }
+
+        &.g-wrap-3 {
+          @apply col-span-6 md:col-span-6;
+
+          .grid-image {
+            @apply aspect-[345/194.11] md:aspect-[1380/777];
+          }
+        }
+
+        &.g-wrap-4,
+        &.g-wrap-5,
+        &.g-wrap-6 {
+          @apply col-span-6 md:col-span-2;
+
+          .grid-image {
+            @apply aspect-[345/194.11] md:aspect-[433/304];
+          }
+        }
+      }
+    }
+  }
+}

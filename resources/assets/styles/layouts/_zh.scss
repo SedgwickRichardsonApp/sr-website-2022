@@ -1,0 +1,656 @@
+html.zh {
+  // body {}
+  // h1, h2, h3,h4, h5, h6 {}
+
+  h1,
+  .h1 {
+    @apply text-[46px] leading-[58px] tracking-[-0.4px];
+
+    @screen sm {
+      @apply text-6xl;
+    }
+
+    @screen md {
+      @apply text-[80px];
+    }
+
+    @screen xl {
+      @apply text-8xl leading-[19.2px] tracking-[-2px];
+    }
+  }
+
+  h2,
+  .h2 {
+    @apply text-[46px] leading-[58px] tracking-[-0.4px];
+
+    @screen md {
+      @apply text-[60px] -tracking-[0px];
+    }
+
+    @screen xl {
+      @apply text-[88px] leading-[96.8px] -tracking-[0px];
+    }
+  }
+
+  h3,
+  .h3 {
+    @apply text-[46px] leading-[58px] tracking-[-0.4px];
+
+    @screen md {
+      @apply text-[48px];
+    }
+
+    @screen xl {
+      @apply text-[68px] leading-[74.8px] tracking-[-3px];
+    }
+  }
+
+  h4,
+  .h4 {
+    @apply text-[28px] leading-[39.2px];
+
+    @screen md {
+      @apply text-[27px];
+    }
+
+    @screen lg {
+      @apply text-[34px];
+    }
+
+    // @screen xl {
+    //   @apply text-[56px] leading-[67.2px] tracking-[-1px];
+    // }
+  }
+
+  h5,
+  .h5 {
+    @apply text-[22px] leading-[30.8px];
+
+    @screen xl {
+      @apply text-[44px] leading-[1.4] tracking-[-1px];
+    }
+  }
+
+  h6,
+  .h6 {
+    @apply text-[22px] leading-[33px];
+
+    @screen md {
+      @apply text-[2.3125rem] leading-[2.75rem];
+    }
+
+    @screen xl {
+      @apply text-[34px] leading-[47.6px] tracking-[-0.7px];
+    }
+  }
+
+  .h7 {
+    @apply text-lg leading-[25.2px];
+
+    @screen xl {
+      @apply text-[22px];
+    }
+  }
+
+  .subtitle {
+    @apply font-medium text-[17px] leading-[25.16px];
+
+    @screen xl {
+      @apply text-[19px] tracking-[-0.3px];
+    }
+  }
+
+  .link-subtitle {
+    @apply text-[19px] leading-6;
+  }
+
+  p {
+    @apply text-[15px] leading-[21px];
+
+    @screen md {
+      @apply text-[17px];
+    }
+  }
+
+  .input-floating-label input,
+  .input-floating-label textarea {
+    @apply text-[15px] leading-[24px] md:text-[17px] md:leading-[28px];
+  }
+
+  header .menu-item a {
+    @apply text-[17px];
+  }
+
+  .mobile-menu {
+    .menu-wrapper .nav-menu {
+      @apply pt-4;
+    }
+
+    .menu-item a {
+      @apply text-[32px] leading-[47.36px];
+    }
+
+    .menu-inquiries {
+      @apply pb-2;
+
+      h6 {
+        @apply text-sm mb-0 leading-[24px];
+      }
+    }
+
+    .contact-modal-trigger {
+      @apply text-[28px] leading-[37px];
+    }
+  }
+
+  header .menu-item {
+    @apply pb-2;
+
+    a::after {
+      @apply bottom-[-6px];
+    }
+  }
+
+  footer {
+    .tagline {
+      @apply text-[13px] leading-[24px] md:text-[1.063rem];
+    }
+
+    .copyright-wrapper .copyright {
+      @apply text-sm leading-[24px];
+    }
+  }
+
+  .right-side-modal .modal-close .label {
+    @apply text-[15px] md:text-[1.063rem];
+  }
+
+  /* Views Page */
+  .tpl-views-page-title .page-title {
+    @apply lg:text-[88px] lg:leading-[96.8px] lg:-tracking-[0px];
+  }
+
+  .tpl-views-grid .tabs .tab-header .tab-item > div {
+    @apply text-[15px] lg:text-[1.125rem];
+  }
+
+  .cpt-views-content .title {
+    @apply md:text-[34px];
+  }
+
+  .cpt-views-content .content-wrapper p {
+    @apply md:text-[17px] md:leading-[28px];
+  }
+
+  .view-restriction-wrap .view-restriction-title {
+    @apply text-[22px] md:text-[44px] md:tracking-[-1px];
+  }
+
+  /* Views Page end */
+
+  /* Work Detail Page */
+  .cpt-work-hero {
+    .hero-client-name {
+      @apply text-lg leading-[25px] md:text-[22px] md:leading-[32.56px];
+    }
+
+    .hero-title {
+      @apply text-5xl leading-[54px] tracking-[-0.4px] md:text-[68px] md:leading-[74.8px];
+    }
+
+    .term-item {
+      @apply text-[15px] leading-[22px] md:text-[17px] md:leading-[26px];
+    }
+  }
+
+  .cpt-work-intro {
+    .term-label {
+      @apply text-[15px] leading-[22.2px] md:text-[17px] md:leading-[25.16px];
+    }
+
+    .term-value {
+      @apply text-[15px] leading-[22.2px] md:text-[17px] md:leading-[16px];
+    }
+
+    .cpt-intro-right h4 {
+      @apply text-[16px] leading-[19.2px] tracking-[-0.1px] md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px];
+    }
+
+    .intro-description p {
+      @apply text-base leading-[23.2px] md:text-[17px] md:leading-[28px];
+    }
+
+    .intro-awards-title {
+      @apply text-[17px] leading-[23.8px] md:text-[22px] md:leading-[32.56px];
+    }
+
+    .award-item-description,
+    .award-item-location {
+      @apply text-base leading-[23.2px] md:text-[17px] md:leading-[28px];
+    }
+  }
+
+  .cpt-work-related-work .related-work-content .link-client-name {
+    @apply text-[17px];
+  }
+
+  .acf-block {
+    .title-left-content-right-block .title {
+      @apply text-[17px] leading-[23.8px] md:text-xl md:leading-[29.6px];
+    }
+
+    .content {
+      p {
+        @apply text-base leading-[23.2px] md:text-[17px] md:leading-[28px];
+      }
+    }
+  }
+
+  /* Work Detail Page end */
+
+  /* Home Page */
+  .tpl-homepage-works-full-width,
+  .tpl-homepage-works-two-column,
+  .tpl-homepage-works-one-column {
+    .work-item-client-name {
+      @apply text-[15px] md:text-xl;
+    }
+
+    .work-item-title {
+      @apply leading-[25.2px] mb-0 md:mb-1 md:leading-[32.56px];
+    }
+
+    .work-item .term-item {
+      @apply lg:text-[15px];
+    }
+  }
+
+  .tpl-homepage-expertise {
+    .expertise-title {
+      @apply font-[17px];
+    }
+
+    .expertise-item {
+      @apply md:leading-[47.6px];
+
+      .expertise-item-title {
+        @apply text-[22px] leading-[33px] md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px];
+      }
+
+      .expertise-item-description {
+        @apply text-[15px] leading-[24px] pt-[0.2rem] md:text-[17px] md:leading-[24.62px] md:pt-[0.35rem];
+      }
+    }
+  }
+
+  .tpl-homepage-clients .clients-title {
+    @apply text-[17px] md:text-xl;
+  }
+
+  .newsletter-section {
+    .newsletter-cta-small-title {
+      @apply mb-0;
+    }
+
+    .newsletter-form input:not([type="submit"]) {
+      @apply md:text-[1.063rem];
+    }
+
+    .newsletter-cta-title {
+      @apply text-[40px] leading-[59.2px] md:text-[76px] md:leading-[110.05px];
+
+      @media (min-width: 812px) {
+        @apply text-[46px] leading-[48px];
+      }
+
+      @media (min-width: 1023px) {
+        @apply text-[50px] leading-[48px];
+      }
+
+      @media (min-width: 1204px) {
+        @apply text-[64px] leading-[78px];
+      }
+    }
+
+    .newsletter-title {
+      @apply text-[22px] leading-[33px] md:leading-[47.6px] md:tracking-[-0.7px] md:text-[34px];
+    }
+  }
+
+  /* Home Page end */
+
+  /* Expertise Page */
+  .tpl-expertise-hero {
+    .hero-title {
+      @apply text-[48px] leading-[58px] md:text-[92px] md:leading-[101.2px] md:tracking-[-3.7px];
+    }
+
+    .hero-subtitle {
+      @apply text-[17px] leading-[25.16px] md:text-[22px] md:leading-[32.56px] md:tracking-[-0.02em];
+    }
+  }
+
+  .tpl-expertise-content {
+    .navigation-link {
+      @apply text-[22px] leading-[33px] md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px];
+    }
+
+    .content h2 {
+      @apply text-[46px] leading-[54px] tracking-[-0.4px] md:text-[68px] mb-10 md:mb-8;
+
+      line-height: 54px !important;
+
+      @screen md {
+        line-height: 74.8px !important;
+      }
+    }
+
+    .content-intro,
+    h4.content-intro {
+      @apply text-[22px] leading-[33px] md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px];
+    }
+
+    .content h6 {
+      @apply text-[17px] leading-[25.16px] md:text-[20px] md:leading-[29.6px];
+    }
+
+    .content ul li {
+      @apply text-[15px] leading-[24px] md:text-[17px] md:leading-[28px];
+
+      &::before {
+        @apply w-[3px] h-[3px] top-[12.5px];
+      }
+    }
+
+    .work-item-client-name {
+      @apply text-[15px] leading-[21px] md:text-xl md:leading-[29.6px] md:tracking-[-0.4px];
+    }
+  }
+
+  /* Expertise Page end */
+
+  /* Work Page */
+  .tpl-work-results {
+    .title.h2 {
+      @apply lg:text-[88px] lg:leading-[96.8px] lg:-tracking-[0px];
+    }
+
+    .filter-item .item-name {
+      @apply text-[15px] leading-[22.2px] md:text-lg md:leading-[27px];
+    }
+
+    .filter-item-terms .term-item {
+      @apply text-[15px] leading-[24px] md:text-[17px];
+    }
+
+    .work-item-title {
+      @apply md:leading-[32.56px];
+    }
+
+    .work-item .work-item-client-name {
+      @apply text-[15px] leading-[21px] md:text-[17px] md:leading-[25.6px];
+    }
+  }
+
+  /* Work Page end */
+
+  /* Contact Page */
+  .tpl-contact-hero .brief-us-wrapper .brief-join-title,
+  .tpl-contact-hero .join-us-wrapper .brief-join-title {
+    @apply md:mb-1;
+  }
+
+  .tpl-contact-intro {
+    .left h5,
+    .right p {
+      @apply text-[1.375rem] leading-[33px] md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px];
+    }
+  }
+
+  .tpl-contact-offices .office-details-wrapper {
+    p {
+      @apply md:leading-[26.64px] md:tracking-[-0.4px] md:mb-[4px];
+    }
+
+    .location {
+      @apply font-medium;
+    }
+
+    .address {
+      @apply md:text-[17px] md:leading-[24.62px];
+    }
+  }
+
+  .tpl-contact-open-positions {
+    .section-title {
+      @apply md:text-[56px] md:leading-[67.2px] md:tracking-[-1px];
+    }
+
+    .job-detail-wrapper {
+      .job {
+        @apply md:text-xl md:leading-[29.6px] md:tracking-[-0.4px];
+      }
+
+      .location {
+        @apply md:text-[17px] md:leading-[28px];
+      }
+    }
+  }
+
+  /* Contact Page end */
+
+  /* About Page */
+  .tpl-about-hero {
+    .hero-title {
+      @apply text-[46px] leading-[58px] tracking-[-0.4px] md:text-[88px] md:leading-[96.8px];
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        @apply text-[72px];
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        @apply text-[88px];
+      }
+    }
+  }
+
+  .tpl-about-intro {
+    .intro-title {
+      @apply text-[22px] leading-[33px] tracking-normal md:text-[34px] md:leading-[47.6px] md:tracking-[-0.7px] md:max-w-[40.9vw];
+    }
+
+    .intro-content {
+      .subtitle {
+        @apply md:text-[20px] md:leading-[29.6px];
+      }
+
+      p {
+        @apply leading-[24px] md:leading-[28px];
+      }
+
+      h4 {
+        @apply text-[17px] leading-[25.16px] font-medium md:text-[20px] md:leading-[29.6px];
+      }
+    }
+  }
+
+  .tpl-about-team {
+    .team-title {
+      @apply text-[28px] leading-[39px] md:text-[56px] md:leading-[67px] md:tracking-[-1px];
+    }
+
+    .team-description {
+      @apply md:max-w-[45.55vw];
+
+      p {
+        @apply leading-[24px] md:leading-[28px];
+      }
+    }
+
+    .team-member-title {
+      @apply text-lg leading-[23.78px] tracking-[-0.4px] md:text-xl md:leading-[26.42px];
+    }
+
+    .team-member-position {
+      @apply text-[15px] leading-[21px] md:text-[16px] md:leading-[22.4px];
+    }
+  }
+
+  /* Job Detail Page */
+  .cpt-jobs-details {
+    .jobs-meta-wrapper {
+      .job-page-header {
+        @apply font-medium text-[15px] leading-[22.2px] md:text-lg md:leading-[26.64px] md:tracking-[-0.4px];
+      }
+
+      .location,
+      .working-type,
+      .pub-date {
+        @apply text-[15px] leading-[22.2px] md:text-[17px] md:leading-[26px];
+      }
+    }
+
+    .page-title {
+      @apply text-[28px] leading-[39.2px] md:text-[56px] md:leading-[67.2px] md:tracking-[-1px];
+    }
+
+    .jobs-description-wrapper {
+      .content {
+        @apply text-[15px] leading-[24px] md:text-[17px] md:leading-[28px];
+      }
+
+      h4 {
+        @apply text-lg leading-[25.2px] tracking-normal md:text-[20px] md:leading-[29.6px];
+      }
+    }
+  }
+
+  .jobs-modal {
+    .jobs-modal-title .title {
+      @apply font-medium text-[15px] leading-[22.2px] md:text-lg md:leading-[26.64px] md:tracking-[-0.4px];
+    }
+
+    .jobs-modal .job-meta-wrapper {
+      .job-location,
+      .job-work-type,
+      .job-date {
+        @apply text-[15px] leading-[22.2px] md:text-[17px] md:leading-[26px] md:mb-1;
+      }
+    }
+
+    .job-content-wrapper {
+      .page-title {
+        @apply text-[28px] leading-[39.2px] md:text-[56px] md:leading-[67.2px] md:tracking-[-1px];
+      }
+
+      .content {
+        @apply text-[15px] leading-[24px] md:text-[17px] md:leading-[28px];
+      }
+
+      h4 {
+        @apply text-lg leading-[25.2px] tracking-normal md:text-[20px] md:leading-[29.6px];
+      }
+    }
+  }
+
+  /* Job Detail Page end */
+
+  /* People Modal */
+  .people-modal {
+    .modal-title {
+      @apply text-[15px] leading-[22px] font-medium md:text-lg md:leading-[27px] md:tracking-[-0.4px];
+    }
+
+    .work-info .location,
+    .work-info .since {
+      @apply text-[15px] md:text-[17px];
+    }
+
+    .people-content-wrapper .text-wrapper {
+      .name {
+        @apply text-[24px] leading-[29px] tracking-[-0.5px] md:text-[47px] md:leading-[56px] md:tracking-[-1.9px] md:mb-[9px];
+      }
+
+      .title {
+        @apply text-[18px] leading-[25px] font-medium md:text-[22px] md:leading-[33px];
+      }
+
+      .description p {
+        @apply leading-[24px];
+      }
+    }
+  }
+
+  /* People Modal end */
+
+  /* People Detail Page */
+  .cpt-people-details .people-description-wrapper {
+    .page-title {
+      @apply text-[24px] leading-[28.8px] tracking-[-0.5px] md:text-[44px] md:leading-[52.8px] md:tracking-[-1px];
+    }
+
+    .people-position {
+      @apply leading-[25.2px] md:leading-[32.56px];
+    }
+
+    .content,
+    .content > * {
+      @apply text-[15px] leading-[24px];
+    }
+  }
+
+  /* People Detail Page end */
+
+  /* Contact Form Modal */
+  .contact-modal {
+    .contact-form {
+      @apply lg:mt-[220px];
+    }
+
+    .contact-title {
+      @apply text-[46px] tracking-[-0.4px] max-w-[86.13vw] mt-[16px] md:mt-0;
+
+      line-height: 54px !important;
+
+      @screen md {
+        @apply text-[48px] tracking-[-0.4px] max-w-[86.13vw];
+      }
+
+      @screen lg {
+        @apply text-[68px] tracking-normal max-w-[34.41vw];
+
+        line-height: 74.8px !important;
+      }
+    }
+  }
+
+  /* Contact Form Modal end */
+
+  /* Search Modal */
+  .search-modal {
+    .search-input {
+      @apply text-[22px] md:text-[34px] md:tracking-[-0.7px];
+    }
+
+    .results-wrapper .heading-wrap {
+      @apply md:tracking-[0.4px];
+    }
+
+    // .result-item-title {
+    //   @apply md:tracking-[-0.5px];
+    // }
+
+    .result-item-subtitle {
+      @apply text-[15px] md:text-[20px] md:tracking-[-0.4px];
+    }
+  }
+
+  /* Search Modal end */
+
+  /* Privacy Page */
+  .privacy-legal-content .content-wrapper .terms-content {
+    @apply text-[15px] md:text-[17px] leading-[21px];
+  }
+
+  /* Privacy Page end */
+}

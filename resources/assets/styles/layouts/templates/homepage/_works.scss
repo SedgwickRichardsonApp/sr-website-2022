@@ -1,0 +1,15 @@
+@import "works/full-width";
+@import "works/one-column";
+@import "works/two-column";
+
+.work-group-title-wrapper {
+  @apply flex justify-between items-center px-[30px] mb-4 mt-0 md:mt-[85px] md:mb-10;
+
+  .work-group-title {
+    @apply font-twk text-[34px] tracking-[-1px] leading-[1.2];
+    
+    @screen md {
+      @apply text-6xl tracking-[-2.4px];
+    }
+  }
+}

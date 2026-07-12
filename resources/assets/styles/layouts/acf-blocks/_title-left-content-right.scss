@@ -1,0 +1,9 @@
+.title-left-content-right-block {
+  .title {
+    @apply text-lg font-medium mb-0 uppercase leading-[1.3125rem];
+
+    @screen lg {
+      @apply text-xl -tracking-[0.025rem];
+    }
+  }
+}

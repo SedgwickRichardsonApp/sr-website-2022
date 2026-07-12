@@ -1,0 +1,94 @@
+.view-restriction-wrap {
+  @apply border-t border-black-100 pt-10 pb-20 md:pt-14 md:pb-[7.5rem] translate-y-full;
+
+  transition: transform 0.5s ease;
+
+  &.expanded {
+    @apply translate-y-0;
+  }
+
+  &.registered {
+    @apply hidden;
+  }
+
+  .view-restriction-title {
+    @apply text-2xl mb-[2rem];
+
+    @screen md {
+      @apply text-[47px] -tracking-[1.9px] max-w-[400px];
+
+      line-height: 3.5rem !important;
+    }
+  }
+  
+  .submit-button {
+    @apply w-full;
+
+    @screen md {
+      @apply w-auto;
+    }
+  }
+
+  .thank-you-title {
+    @apply text-2xl mb-8;
+
+    @screen md {
+      @apply text-5xl;
+    }
+  }
+
+  .view-restriction-close {
+    @apply flex absolute items-center right-[15px] md:right-[30px] top-[15px];
+    
+    label {
+      @apply leading-[18px];
+    }
+  }
+
+  .view-restriction-form {
+    input[type="submit"] {
+      @apply hidden;
+    }
+
+    .ajax-loader,
+    .wpcf7-spinner {
+      @apply m-0;
+    }
+
+    .submit-button-wrapper {
+      @apply mt-0;
+
+      @screen md {
+        @apply mt-5;
+      }
+    }
+
+    .submit-button {
+      @apply w-full py-[0.9rem] px-[2.119rem] ;
+
+      @screen md {
+        @apply w-auto;
+      }
+
+      .btn-label {
+        @apply text-base md:text-sm mr-[0.2rem];
+      }
+
+      .btn-icon {
+        @apply w-[14px];
+      }
+
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    .wpcf7-response-output {
+      @apply text-xs text-[#DC004A] md:mb-0;
+
+      margin-bottom: 40px !important;
+    }
+  }
+}

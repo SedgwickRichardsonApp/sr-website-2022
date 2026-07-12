@@ -1,0 +1,14 @@
+$fonts: "../fonts";
+$images: "../images";
+
+// WP admin bar
+$screen-admin-min: 783px;
+
+:root {
+  // wp admin bar breakpoints
+  --g-admin-bar-small: 32px;
+  --g-admin-bar-large: 46px;
+}
+
+$cursor-orange: #fd4c1b;
+$cursor-color: rgba(253, 76, 27, 0.2);

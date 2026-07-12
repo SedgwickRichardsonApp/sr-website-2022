@@ -1,0 +1,91 @@
+.tpl-privacy-menu {
+  // @apply sticky top-36;
+
+  .menu-title {
+    @apply text-xl uppercase font-medium font-twk mb-5 hidden md:block;
+  }
+
+  ul,
+  ol {
+    @apply mb-5 md:mb-20 leading-[1.575rem] font-tt text-lg font-normal;
+
+    list-style: auto;
+    list-style-position: inside;
+
+    li {
+      @apply md:mb-1 mb-2 text-left overflow-hidden pb-1;
+
+      animation: fade-in 1s cubic-bezier(0.28, 0, 0.49, 1) forwards;
+
+      .menu-item-link {
+        @apply inline-flex overflow-hidden text-black-400 relative transition-all duration-700 ml-[-20px] pl-[20px];
+
+        &::after {
+          @apply w-full h-[1px] absolute bottom-[2px] left-0 bg-black-400;
+
+          content: "";
+          transform: translate3d(-101%, 0, 0);
+          opacity: 1;
+          animation: trace-out 0.25s ease-out 0s forwards;
+        }
+  
+        &:hover,
+        &:active {
+          &::after {
+            opacity: 1;
+            animation: trace-in 0.25s ease-out 0s forwards;
+          }
+        }
+
+        &.current-item::after {
+          animation: trace-in 0s ease-out 0s forwards;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .privacy-menu-wrap.custom-sticky-menu {
+    @apply fixed top-28;
+  }
+
+  @media (max-width: 1023px) {
+    @apply relative top-auto;
+
+    .privacy-menu-wrap {
+      display: none;
+
+      &.custom-sticky-menu {
+        @apply flex overflow-x-scroll w-auto min-w-full whitespace-nowrap fixed top-0 left-0 right-0 z-30 bg-white-100 text-black-100 pl-[0.938rem] pt-[0.938rem];
+        
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        body.admin-bar & {
+          top: var(--g-admin-bar-small);
+  
+          @media (max-width: $screen-admin-min) {
+            top: var(--g-admin-bar-large);
+          }
+        }
+        
+        .content-wrap.js-header-black & {
+          filter: invert(1);
+        }
+
+        .menu-title {
+          @apply block border-b border-solid mb-4 mr-4 text-lg;
+        }
+
+        ol,
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}

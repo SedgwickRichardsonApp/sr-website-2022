@@ -1,0 +1,43 @@
+.tpl-contact-being-sr {
+  @apply pt-20 pb-4 lg:py-[70px];
+
+  .content-wrapper {
+    @apply flex flex-wrap w-full md:w-[79.45vw] mx-auto;
+  }
+
+  .being-sr-title {
+    min-height: auto;
+
+    @screen lg {
+      min-height: 100px;
+    }
+  }
+
+  .desc {
+    //@apply w-full md:w-[54.8vw] leading-[1.486rem] ml-auto;
+
+    p {
+      @apply mb-[1.875rem] text-base leading-[23.2px] md:text-lg md:leading-[1.575rem] md:mb-[1.9rem];
+    }
+  }
+
+  .col-left {
+    margin-bottom: 1em;
+
+    @screen lg {
+      margin-bottom: 0;
+    }
+
+    .desc {
+      margin-right: 0;
+
+      @screen lg {
+        margin-right: 5rem;
+      }
+    }
+  }
+
+  .sr-sub-item {
+    @apply font-twk font-medium -tracking-[0.4px];
+  }
+}

@@ -1,0 +1,332 @@
+.tpl-work-results {
+  @apply pt-28 pb-20;
+
+  @screen md {
+    @apply pt-40 pb-[140px];
+  }
+
+  .title {
+    @apply mb-10 -tracking-[1.9px];
+
+    @screen lg {
+      @apply mb-20 -tracking-[4%] text-[5.75rem];
+    }
+  }
+
+  .work-taxonomies-filter-wrapper {
+    @apply mb-[0.75rem] font-tt md:mb-10;
+  }
+
+  .work-taxonomies-filter {
+    @apply flex;
+
+    @media (max-width: 767px) {
+      @apply justify-between max-w-[344px];
+    }
+  }
+
+  .filter-item {
+    @apply text-base overflow-hidden pb-1 leading-[18.75px] -tracking-[0.1875px] md:text-xl md:leading-[23.44px] md:-tracking-[0.2px];
+
+    animation: fade-in 1s cubic-bezier(0.28, 0, 0.49, 1) forwards;
+    
+    .item-name {
+      @apply relative mb-0 text-base md:text-xl font-normal transition-all duration-700;
+
+      &::after {
+        content: "";
+
+        @apply w-full h-[2px] absolute bottom-0 left-0 bg-black-400 opacity-100;
+
+        animation: trace-out 0.25s ease-out 0s forwards;
+      }
+    }
+      
+    &:hover,
+    &:active {
+      .item-name::after {
+        @apply bg-black-400 opacity-100;
+
+        animation: trace-in 0.25s ease-out 0s forwards;
+      }
+    }
+
+    &.active {
+      .item-name::after {
+        @apply bg-black-400 opacity-100;
+        
+        animation: trace-in 0s ease-out 0s forwards;
+      }
+    }
+
+    &:not(:first-child) {
+      @apply ml-0;
+
+      @screen md {
+        @apply ml-16;
+      }
+    }
+
+    // &.active::after {
+    //   @apply content-[""] absolute bg-black-100 w-full left-0 -bottom-[2px] h-[2px];
+    // }
+  }
+
+  .filter-item-terms-wrapper {
+    @apply max-h-0 overflow-hidden pt-0 transition-all;
+
+    &.active {
+      @apply max-h-[700px] h-auto;
+    }
+  }
+
+  .filter-item-terms {
+    @apply columns-2 border-t border-primary pt-5 pb-[39px] mt-[14px] md:pb-[30px];
+
+    column-gap: 1rem;
+
+    @screen md {
+      @apply columns-4;
+
+      column-gap: 2rem;
+    }
+
+    .term-item {
+      @apply inline-block text-base mb-0 leading-6 overflow-hidden pb-1;
+
+      break-inside: avoid-column;
+
+      .item-name {
+        @apply relative md:text-[1.125rem] md:leading-[25.2px] transition-all duration-700;
+
+        &::after {
+          content: "";
+  
+          @apply w-full h-[2px] absolute bottom-0 left-0 bg-black-400 opacity-100;
+
+          animation: trace-out 0.25s ease-out 0s forwards;
+        }
+
+        &:hover,
+        &:active {
+          &::after {
+            @apply bg-black-400 opacity-100;
+
+            animation: trace-in 0.25s ease-out 0s forwards;
+          }
+        }
+
+        &.active {
+          &::after {
+            @apply bg-black-400 opacity-100;
+            
+            animation: trace-in 0s ease-out 0s forwards;
+          }
+        }
+      }
+    }
+  }
+
+  .work-group-wrapper {
+    &:not(:last-child) {
+      @apply mb-10;
+
+      @screen md {
+        @apply mb-20;
+      }
+    }
+  }
+
+  .work-group-title-wrapper {
+    @apply flex items-center justify-between mb-3 pl-0 pr-[15px] md:pr-0;
+
+    @screen md {
+      @apply mb-5;
+    }
+  }
+
+  .work-group-view-all-link {
+    @apply cursor-hover text-base font-medium underline;
+
+    @screen md {
+      @apply text-lg no-underline;
+    }
+
+    &:hover {
+      @screen md {
+        @apply underline;
+      }
+    }
+  }
+
+  .works-grid {
+    @apply grid grid-cols-1 gap-x-5 gap-y-10;
+
+    @screen sm {
+      @apply grid-cols-2 gap-x-10;
+    }
+
+    @screen md {
+      @apply grid-cols-2 gap-x-10;
+    }
+
+    @screen lg {
+      @apply grid-cols-2 gap-x-10;
+    }
+
+    .work-item-col {
+      @apply col-span-1;
+
+      &:last-child {
+        @apply pr-[15px] md:pr-0;
+      }
+    }
+
+    &.has-view-all {
+      @apply flex overflow-x-scroll gap-x-0;
+
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @screen md {
+        @apply grid grid-cols-2 gap-10;
+      }
+
+      .work-item-col {
+        @apply shrink-0 w-[80%];
+
+        @screen md {
+          @apply col-span-1 w-auto;
+        }
+
+        &:not(:first-child) {
+          @apply ml-5;
+
+          @screen md {
+            @apply ml-0;
+          }
+        }
+      }
+    }
+  }
+
+  .work-item {
+    @apply block no-underline;
+
+    .work-item-client-name {
+      @apply text-[#aaa] text-base leading-5;
+
+      @screen md {
+        @apply text-lg leading-6;
+      }
+
+      &:empty {
+        @apply w-1/2;
+
+        height: 20px;
+
+        @screen md {
+          height: 27px;
+        }
+      }
+    }
+  }
+
+  .work-item-image-wrapper {
+    @apply block relative mb-2 overflow-hidden w-full;
+
+    padding-bottom: 70%;
+
+    @screen md {
+      @apply mb-3;
+    }
+  }
+
+  .work-item-image,
+  .acf-video-player {
+    @apply absolute inset-0 h-full w-full object-cover;
+
+    &.iframe {
+      transform: scale(1.25);
+
+      > div,
+      > iframe {
+        height: 100% !important;
+        position: absolute !important;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .work-item-title {
+    @apply text-lg mb-[0.15rem] font-twk -tracking-[0.0225rem];
+
+    line-height: 1.3;
+
+    @screen md {
+      @apply text-[22px] leading-[29px] -tracking-[0.045rem];
+    }
+
+    &:empty {
+      @apply w-full;
+
+      height: 24px;
+
+      @screen md {
+        height: 29px;
+      }
+    }
+  }
+
+  .view-more-button-wrapper {
+    @apply text-center mb-0 px-4 mt-11 md:mt-30;
+
+    .view-more-button {
+      @apply mx-auto text-base font-medium py-[15px] px-[20px];
+    
+      &.hidden {
+        display: none;
+      }
+
+      .btn-label {
+        @apply text-base mr-[10px] uppercase;
+      }
+    
+      .btn-icon {
+        @apply w-[17px] h-[15px];
+      }
+    
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}
+
+.tpl-work-results.works-swipper {
+  .container-fluid {
+    @apply pr-0 md:pr-[30px] lg:pr-[30px];
+  }
+
+  .title {
+    @apply pr-[15px] md:pr-0;
+  }
+
+  .work-taxonomies-filter {
+    @apply md:pr-0;
+  }
+
+  .work-group-title-wrapper {
+    @apply pr-[15px] md:pr-0;
+  }
+}

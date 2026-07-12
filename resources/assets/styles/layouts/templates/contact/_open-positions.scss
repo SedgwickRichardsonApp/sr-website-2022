@@ -1,0 +1,175 @@
+.tpl-contact-open-positions {
+  @apply pt-[2.563rem] pb-20 md:py-20 lg:pt-[33px] lg:pb-[160px];
+
+  @media (min-width: 839px) {
+    .content-wrapper {
+      @apply max-w-[79.8vw] mx-auto;
+    }
+  }
+
+  .section-title {
+    @apply text-[2.125rem] font-normal font-twk tracking-[-1px] md:tracking-[-2.4px];
+
+    line-height: 1.2 !important;
+
+    @screen lg {
+      @apply text-6xl -tracking-[0.15rem] font-normal;
+
+      line-height: 1.5 !important;
+    }
+  }
+
+  .job-group-row {
+    width: 100%;
+    border-top: 1px solid #0a0a10;
+    padding: 3rem 0;
+    transition: border 0.3s ease;
+
+    .location-title {
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      border-color: #fd4c1b;
+
+      .location-title {
+        color: #fd4c1b;
+      }
+    }
+
+    .jobs-modal-trigger {
+      padding-left: 0;
+      transition: padding 0.3s ease;
+      position: relative;
+
+      .navigation-item-icon {
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        padding-left: 1.6em;
+
+        .navigation-item-icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .jobs-list {
+    @apply mt-7 lg:mt-[3.75rem];
+  }
+
+  .job-item {
+    @apply font-twk px-0 mb-[1rem] tracking-[-0.3px];
+
+    &:last-child {
+      @apply mb-0;
+    }
+
+    @screen md {
+      @apply mb-[0.5rem] tracking-[-0.4px];
+    }
+  }
+
+  .job-detail-wrapper {
+    @apply flex flex-wrap justify-between transition-all duration-500;
+
+    &:hover {
+      @apply scale-[0.98];
+    }
+
+    span {
+      @apply text-base;
+    }
+
+    .job {
+      @apply text-left;
+    }
+
+    .location {
+      @apply text-left break-words md:break-normal md:text-lg;
+    }
+
+    .work-type {
+      @apply text-left md:ml-8 md:text-lg;
+    }
+
+    @screen md {
+      span {
+        @apply text-xl;
+      }
+    }
+  }
+
+  .job-detail-left {
+    .work-type {
+      @apply block ml-0;
+
+      @screen sm {
+        @apply hidden;
+      }
+    }
+  }
+
+  .job-detail-right {
+    @apply grid sm:grid-cols-2 sm:w-[220px] md:w-[298px] gap-x-14;
+
+    .location {
+      @apply whitespace-nowrap;
+    }
+
+    .work-type {
+      @apply hidden whitespace-nowrap;
+
+      @screen sm {
+        @apply inline-block;
+      }
+    }
+  }
+
+  .general-contact-wrapper {
+    @apply mt-[60px] lg:mt-24;
+
+    @screen lg {
+      @apply text-center mt-20;
+    }
+
+    p {
+      @apply block mb-0;
+    }
+
+    .general-contact-email {
+      @apply font-medium;
+
+      &.element-mobile {
+        display: none;
+      }
+
+      .cursor-copy {
+        cursor: none;
+      }
+
+      .email {
+        @apply relative underline underline-offset-4;
+      }
+    }
+  }
+}
+
+.mobile {
+  .tpl-contact-open-positions .general-contact-wrapper .general-contact-email {
+    &.element-desktop {
+      display: none;
+    }
+
+    &.element-mobile {
+      display: block;
+    }
+  }
+}

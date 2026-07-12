@@ -1,0 +1,134 @@
+.coming-soon-content {
+  @apply mt-28 pb-5 md:pb-5;
+
+  .coming-container {
+    .whole-page-container {
+      @apply w-full relative;
+
+      .page-img {
+        @apply w-full;
+        
+        &.page-img-sm {
+          @apply block;
+        }
+        
+        &.page-img-2xl,
+        &.page-img-md {
+          @apply hidden;
+        }
+
+        @screen md {
+          &.page-img-md {
+            @apply block;
+          }
+          
+          &.page-img-2xl,
+          &.page-img-sm {
+            @apply hidden;
+          }
+        }
+
+        @screen 2xl {
+          &.page-img-2xl {
+            @apply block;
+          }
+          
+          &.page-img-sm,
+          &.page-img-md {
+            @apply hidden;
+          }
+        }
+      }
+
+      .email {
+        @apply absolute left-[4vw] h-[5vw];
+
+        &.element-desktop {
+          display: block;
+        }
+        
+        &.element-mobile {
+          display: none;
+        }
+
+        &.email-zh {
+          @apply bottom-[56.56%] w-[83.46vw];
+        }
+
+        &.email-vi {
+          @apply bottom-[56%] w-[67.46vw];
+        }
+
+        @screen md {
+          @apply left-[3vw];
+
+          &.email-zh {
+            @apply bottom-[39%] w-[30.56%] h-[2vw];
+          }
+
+          &.email-vi {
+            @apply bottom-[36.7%] w-[27.83vw] h-[2vw];
+          }
+        }
+
+        @screen 2xl {
+          @apply h-[1.5vw];
+
+          &.email-zh {
+            @apply bottom-[38.56%] w-[22vw] left-[2.3vw];
+          }
+
+          &.email-vi {
+            @apply bottom-[39.6%] w-[19.83vw] left-[2.1vw];
+          }
+        }
+      }
+
+      .home-btn {
+        @apply absolute left-[4.3vw] h-[13vw];
+
+        &.btn-zh {
+          @apply bottom-[41.52%] w-[84vw];
+        }
+
+        &.btn-vi {
+          @apply bottom-[40.46%] w-[81vw];
+        }
+
+        @screen md {
+          @apply left-[2.8vw] h-[4vw];
+
+          &.btn-zh {
+            @apply w-[20vw] bottom-[19.35%];
+          }
+
+          &.btn-vi {
+            @apply w-[29.6vw] bottom-[17.83%];
+          }
+        }
+
+        @screen 2xl {
+          @apply h-[3vw];
+
+          &.btn-zh {
+            @apply w-[14vw] bottom-[22.88%] left-[2.3vw];
+          }
+
+          &.btn-vi {
+            @apply w-[21vw] bottom-[23.33%] left-[2.1vw];
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile .coming-soon-content .coming-container .whole-page-container .email {
+  &.element-desktop {
+    display: none;
+  }
+  
+  &.element-mobile {
+    display: block;
+  }
+}

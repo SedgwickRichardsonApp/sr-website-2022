@@ -1,0 +1,157 @@
+{
+    "key": "group_63f55875bcf55",
+    "title": "Block - SR Video",
+    "fields": [
+        {
+            "key": "field_6476d415445b5",
+            "label": "Video Format",
+            "name": "video_format",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "local_file": "Local File",
+                "url": "URL",
+                "youtube": "Youtube Video",
+                "iframe": "iFrame Embed Code"
+            },
+            "default_value": "local_file",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63f558b8e460f",
+            "label": "Video File",
+            "name": "video_file",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6476d415445b5",
+                        "operator": "==",
+                        "value": "local_file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
+        },
+        {
+            "key": "field_63f55877e460e",
+            "label": "External Video URL",
+            "name": "external_video_url",
+            "type": "url",
+            "instructions": "(Accept .mp4 only)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6476d415445b5",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_63f558dbe4610",
+            "label": "Youtube Video",
+            "name": "youtube_video",
+            "type": "wysiwyg",
+            "instructions": "Use Youtube embed code",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6476d415445b5",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "delay": 0,
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full"
+        },
+        {
+            "key": "field_6476d4db4a94b",
+            "label": "iFrame Video",
+            "name": "iframe_video",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6476d415445b5",
+                        "operator": "==",
+                        "value": "iframe"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1686169063
+}

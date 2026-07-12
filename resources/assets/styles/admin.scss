@@ -1,0 +1,22 @@
+/* stylelint-disable */
+#adminmenu li.menu-top[class*="toplevel_page_menu-custom-label"] {
+  min-height: 0;
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+#adminmenu li.menu-top[class*="toplevel_page_menu-custom-label"] .wp-menu-image {
+  display: none;
+}
+
+#adminmenu li.menu-top[class*="toplevel_page_menu-custom-label"] .wp-menu-name {
+  color: #fd4c1b;
+  font-size: 10px;
+  padding: 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#adminmenu .wp-menu-separator + li.menu-top[class*="toplevel_page_menu-custom-label"] {
+  margin-top: 10px;
+}

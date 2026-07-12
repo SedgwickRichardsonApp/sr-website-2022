@@ -1,0 +1,672 @@
+/* stylelint-disable no-descending-specificity */
+
+.cursor-hover,
+.cursor-view {
+  &:hover,
+  &:active {
+    @apply opacity-100;
+  }
+}
+
+.cursors-wrapper {
+  @apply absolute;
+  
+  html.safari body.modal-open & {
+    @apply static;
+  }
+
+  z-index: 999;
+
+  .cursor {
+    @apply fixed pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[102];
+
+    left: inherit;
+    top: inherit;
+    mix-blend-mode: inherit;
+    cursor: none;
+    
+    // @screen md {
+    //   @apply block;
+    // }
+
+    .dot {
+      @apply relative bg-secondary rounded-full h-[1.25rem] w-[1.25rem] transition-all;
+      
+      background-color: $cursor-color;
+      transition: background-color 10ms ease-in;
+    }
+  }
+
+  &.cursor-hover {
+    position: static;
+
+    .cursor .dot {
+      @apply h-[1.25rem] w-[1.25rem];
+
+      background-color: white;
+    }
+  }
+
+  &.cursor-link {
+    position: static;
+
+    .cursor .dot {
+      @apply h-[2.188rem] w-[2.188rem];
+
+      background-color: white;
+    }
+  }
+
+  &.cursor-hover-dark {
+    position: static;
+
+    .cursor .dot {
+      @apply h-[2.188rem] w-[2.188rem]  bg-grey-500;
+    }
+  }
+
+  &.cursor-star {
+    mix-blend-mode: normal;
+
+    .cursor .dot {
+      @apply h-6 w-6 bg-transparent;
+
+      &::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-full w-full;
+
+        content: "";
+        background-image: url("#{$images}/cursors/star.png");
+      }
+    }
+  }
+
+  &.cursor-smile {
+    mix-blend-mode: normal;
+    
+    .cursor {
+      visibility: hidden !important;
+
+      &:first-of-type {
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-6 w-6 bg-transparent;
+
+        &::before {
+          @apply absolute rounded-full top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+          content: "";
+          background-image: url("#{$images}/cursors/smile.png");
+        }
+      }
+    }
+  }
+
+  &.cursor-sad:not(.cursor-link):not(.cursor-copy-email) {
+    mix-blend-mode: normal;
+
+    .cursor {
+      visibility: hidden !important;
+
+      &:first-of-type {
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-6 w-6 bg-transparent;
+
+        &::before {
+          @apply absolute rounded-full top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+          content: "";
+          background-image: url("#{$images}/cursors/sadface.png");
+        }
+      }
+    }
+  }
+
+  &.cursor-circle {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: difference;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-full w-full;
+
+        content: "";
+        background-image: url("#{$images}/cursors/brand.png");
+      }
+    }
+  }
+
+  &.cursor-slider {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-full w-full;
+
+        content: "";
+        background-image: url("#{$images}/cursors/arrows.png");
+      }
+      
+      .dot {
+        @apply bg-transparent h-10 w-20;
+      }
+    }
+  }
+
+  &.cursor-view {
+    mix-blend-mode: normal;
+
+    .cursor {
+      visibility: hidden !important;
+
+      &:first-of-type {
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply flex justify-center items-center scale-[1.25];
+  
+        background-color: $cursor-orange;
+  
+        &::before {
+          @apply text-white-100 text-xs scale-[0.16];
+        }
+      }
+    }
+  }
+
+  &.cursor-dots-matrix {
+    mix-blend-mode: normal;
+
+    .cursor .dot {
+      @apply h-8 w-8 bg-transparent;
+
+      &::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-full w-full;
+
+        content: "";
+        background-image: url("#{$images}/cursors/sustainability.png");
+      }
+    }
+  }
+
+  &.cursor-dot-copy.copied {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: normal;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-auto w-auto whitespace-nowrap;
+        
+        &::before {
+          @apply relative top-0 left-0 font-tt font-medium bg-black-400 bg-center bg-no-repeat bg-contain border border-primary rounded-full text-white-100 text-sm h-full w-full uppercase;
+
+          content: "Copied!";
+          background-image: url("#{$images}/cursors/copied.png");
+          background-size: 18px 18px;
+          background-position-x: 92%;
+          padding: 4px 30px 4px 10px;
+
+          html.zh & {
+            content: "完成!";
+          }
+
+          html.vi & {
+            content: "Đã copy thành công!";
+          }
+        }
+      }
+    }
+  }
+
+  &.cursor-copy {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: difference;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-auto w-auto whitespace-nowrap;
+
+        &::before {
+          @apply relative top-0 left-0 font-tt font-medium bg-white-100 bg-center bg-no-repeat bg-contain border border-primary rounded-full text-primary text-sm h-full w-full uppercase;
+
+          content: "Copy to clipboard";
+          background-image: url("#{$images}/cursors/copied.png");
+          background-size: 18px 18px;
+          background-position-x: 96%;
+          padding: 4px 30px 4px 10px;
+
+          html.zh & {
+            content: "复制";
+          }
+
+          html.vi & {
+            content: "COPY VÀO BẢNG NHỚ TẠM";
+          }
+        }
+      }
+    }
+
+    &.copied {
+      .cursor {
+        .dot {
+          &::before {
+            @apply bg-black-400 text-white-100;
+
+            content: "Copied!";
+
+            html.zh & {
+              content: "完成!";
+            }
+  
+            html.vi & {
+              content: "Đã copy thành công!";
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &.cursor-copy-address {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: difference;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-auto w-auto whitespace-nowrap;
+
+        &::before {
+          @apply relative top-0 left-0 font-tt font-medium bg-white-100 bg-center bg-no-repeat bg-contain border border-primary rounded-full text-primary text-sm h-full w-full uppercase;
+
+          content: "Copy Address to clipboard";
+          white-space: nowrap;
+          background-image: url("#{$images}/cursors/copied.png");
+          background-size: 18px 18px;
+          background-position-x: 96%;
+          padding: 4px 30px 4px 10px;
+
+          html.zh & {
+            content: "复制地址";
+          }
+
+          html.vi & {
+            content: "Copy address vào bảng nhớ tạm";
+          }
+        }
+      }
+    }
+
+    &.copied {
+      .cursor {
+        .dot {
+          &::before {
+            @apply bg-black-400 text-white-100;
+
+            content: "Copied!";
+
+            html.zh & {
+              content: "完成!";
+            }
+  
+            html.vi & {
+              content: "Đã copy thành công!";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.cursor-copy-email {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: difference;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply h-auto w-auto whitespace-nowrap;
+
+        &::before {
+          @apply relative top-0 left-0 font-tt font-medium bg-white-100 bg-center bg-no-repeat bg-contain border border-primary rounded-full text-primary text-sm h-full w-full uppercase;
+
+          content: "Copy Email to clipboard";
+          white-space: nowrap;
+          background-image: url("#{$images}/cursors/copied.png");
+          background-size: 18px 18px;
+          background-position-x: 96%;
+          padding: 4px 30px 4px 10px;
+
+          html.zh & {
+            content: "复制电邮连结";
+          }
+
+          html.vi & {
+            content: "Copy email vào bảng nhớ tạm";
+          }
+        }
+      }
+    }
+
+    &.copied {
+      .cursor {
+        .dot {
+          &::before {
+            @apply bg-black-400 text-white-100;
+
+            content: "Copied!";
+
+            html.zh & {
+              content: "完成!";
+            }
+  
+            html.vi & {
+              content: "Đã copy thành công!";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.cursor-exclusion {
+    mix-blend-mode: exclusion;
+  }
+
+  &.cursor-hue {
+    mix-blend-mode: hue;
+  }
+
+  &.cursor-normal {
+    mix-blend-mode: normal;
+  }
+
+  &.cursor-screen {
+    mix-blend-mode: screen;
+  }
+
+  &.cursor-invert .cursor::before {
+    filter: invert(1);
+  }
+
+  &.only-one {
+    mix-blend-mode: normal;
+
+    .cursor {
+      @apply bg-transparent;
+
+      visibility: hidden !important;
+
+      &:nth-of-type(1) {
+        mix-blend-mode: difference;
+        visibility: visible !important;
+      }
+
+      .dot {
+        @apply bg-white-100;
+      }
+    }
+  }
+
+  &.cursor-staff {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/staff.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-brand-building {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/brand.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-employer-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/employer.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-investment-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/investment.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-place-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/place.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-sustainability {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/sustainability.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+  &.cursor-consumer-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[1.563rem] w-[1.563rem];
+
+        content: "";
+        background-image: url("#{$images}/cursors/consumer.png");
+      }
+
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-xl-brand-building {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("../images/cursors/xl-brand.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-xl-employer-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("#{$images}/cursors/xl-employer.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-xl-investment-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("#{$images}/cursors/xl-investment.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-xl-place-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("#{$images}/cursors/xl-place.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cursor-xl-sustainability {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("#{$images}/cursors/xl-sustainability.png");
+      }
+      
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+  &.cursor-xl-consumer-branding {
+    mix-blend-mode: normal;
+
+    .cursor {
+      &:first-of-type::before {
+        @apply absolute top-0 left-0 bg-center bg-no-repeat bg-contain h-[160px] w-[160px];
+
+        content: "";
+        background-image: url("#{$images}/cursors/xl-consumer.png");
+      }
+
+      .dot {
+        background-color: transparent;
+      }
+    }
+  }
+}

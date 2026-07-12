@@ -1,0 +1,40 @@
+.copied-prompt-container {
+  @apply hidden;
+
+  html.mobile body.copied-prompt & {
+    @apply block fixed w-full bottom-0 right-0 left-0 px-[14px] py-[11.5px] bg-black-400 text-white-100 text-center;
+    
+    border-radius: 20px 20px 0 0;
+
+    .msg-wrapper {
+      @apply flex justify-center items-center uppercase font-medium font-tt text-center leading-[18px] text-sm text-white-100;
+      
+      .msg {
+        &.copy-other {
+          display: none;
+        }
+
+        &::after {
+          @apply relative inline-block top-[3px] left-0 bg-center bg-no-repeat bg-contain ml-[4px] h-[18px] w-[18px];
+
+          content: "";
+          background-image: url("#{$images}/cursors/copied.png");
+          background-size: 18px 18px;
+          background-position-x: 96%;
+        }
+      }
+    }
+  }
+
+  html.mobile body.copied-address-prompt & {
+    .msg-wrapper .msg {
+      &.copy-other {
+        display: block;
+      }
+
+      &.copy-link {
+        display: none;
+      }
+    }
+  }
+}

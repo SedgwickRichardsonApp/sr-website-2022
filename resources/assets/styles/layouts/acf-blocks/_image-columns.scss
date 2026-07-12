@@ -1,0 +1,21 @@
+.image-columns-block {
+  .image {
+    @apply w-full;
+  }
+
+  .acf-video-player {
+    @apply w-full;
+  }
+
+  .col-span-1 {
+    .acf-video-block {
+      @apply p-0;
+    }
+  }
+
+  .max-block {
+    .acf-video-block {
+      @apply px-0;
+    }
+  }
+}

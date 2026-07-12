@@ -1,0 +1,33 @@
+.tpl-about-intro {
+  @apply py-10;
+
+  @screen lg {
+    @apply pt-24 pb-[17px];
+  }
+
+  .intro-title {
+    @apply font-twk text-2xl leading-[31px] tracking-[-0.5px] md:max-w-[39.33vw];
+
+    @screen lg {
+      @apply text-[37px] tracking-[-0.7px] leading-[44.4px];
+    }
+  }
+
+  .intro-content {
+    h4 {
+      @apply text-lg;
+
+      @screen lg {
+        @apply text-xl tracking-[-0.2px];
+      }
+    }
+
+    h5 {
+      @apply font-medium;
+    }
+
+    p {
+      @apply mb-5;
+    }
+  }
+}

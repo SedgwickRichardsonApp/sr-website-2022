@@ -1,0 +1,272 @@
+.cky-overlay {
+  @apply hidden;
+}
+
+.cky-modal {
+  border-radius: 20px !important;
+  transform: translate(0%, 100%) !important;
+  transition: all 0.5s linear !important;
+  width: auto !important;
+  top: 100% !important;
+  right: 29px;
+  background-color: transparent;
+  box-shadow: none;
+
+  * {
+    cursor: auto;
+  }
+
+  &.cky-modal-open {
+    @apply md:min-w-[789px];
+
+    transform: translate(0, 0) !important;
+    top: auto !important;
+    left: 15px !important;
+    right: 15px !important;
+    bottom: 19px !important;
+    transition: all 0.5s linear;
+
+    @media (min-width: 992px) {
+      left: auto !important;
+      right: 30px !important;
+      bottom: 24px !important;
+    }
+  }
+
+  .cky-preference-center {
+    @apply border-0 rounded-[20px] rounded-b-none w-auto flex md:flex-row px-6 py-6 md:px-[40px] md:py-[30px];
+
+    border-radius: 20px !important;
+
+    .cky-accordion {
+      @apply p-0 mt-0 border-b-0 md:mr-4;
+
+      .cky-accordion-item {
+        @apply mt-0;
+      }
+
+      &.cky-accordion-active .cky-accordion-body {
+        display: none;
+      }
+    }
+
+    .cky-accordion-chevron {
+      display: none;
+    }
+    
+    .cky-accordion-header-des {
+      display: none;
+    }
+    
+    .cky-accordion-wrapper {
+      @apply flex-col md:flex-row mb-0 flex;
+
+      border-color: inherit;
+      border-radius: 0;
+    }
+    
+    .cky-preference-content-wrapper {
+      @apply border-b-0 px-0 pt-0 mb-[15px] md:mb-0 pb-0;
+
+      p {
+        @apply font-tt text-base leading-6 pt-0 pb-0 md:max-w-[54.5vw] md:mb-2;
+      }
+
+      .policy-link {
+        @apply underline cursor-pointer text-base leading-4;
+      }
+    }
+
+    .cky-footer-wrapper {
+      @apply flex items-center;
+
+      .cky-footer-shadow {
+        @apply hidden;
+      }
+    }
+    
+    .cky-accordion-header-wrapper {
+      .cky-accordion-header {
+        @apply mb-[10px] md:mb-0 items-end;
+
+        .cky-switch input[type=checkbox] {
+          @apply w-[36px] h-[20px];
+
+          background-color: transparent !important;
+          border: 1px solid white;
+
+          &::before {
+            @apply h-[13px] w-[13px] left-[3px] bottom-[2.5px] bg-grey-100;
+          }
+
+          // &::after {
+          //   @apply block w-[34px] h-[20px];
+
+          //   content: "";
+          //   background-image: url("#{$images}/icons/toggle-off.svg");
+          //   background-repeat: no-repeat;
+          //   background-size: contain;
+          // }
+
+          &:checked {
+            background-color: transparent !important;
+
+            &::before {
+              @apply translate-x-[15.5px] bg-secondary;
+            }
+
+            // &::after {
+            //   background-image: url("#{$images}/icons/toggle-on.svg");
+            // }
+          }
+        }
+
+        .cky-accordion-btn {
+          @apply font-normal mr-2 text-base;
+        }
+
+        .cky-always-active {
+          @apply text-black-100 font-normal text-base;
+          
+          &::after {
+            @apply block w-[34px] h-[20px] opacity-40;
+
+            content: "";
+            background-image: url("#{$images}/icons/toggle-off.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .cky-audit-table {
+      background-color: #0a0a16 !important;
+      color: white !important;
+    }
+
+    .cky-preference-header {
+      @apply rounded-none border-b-0 pt-[22px] pb-0 px-[24px] hidden;
+
+      .cky-preference-title {
+        @apply font-twk font-medium text-lg leading-[21.6px] md:text-[22px] md:leading-[24px] tracking-[-0.02em];
+      }
+    }
+
+    .cky-preference-body-wrapper {
+      @apply p-0 mr-0;
+    }
+
+    div[data-cky-tag="detail-powered-by"] {
+      display: none !important;
+    }
+
+    .cky-prefrence-btn-wrapper {
+      @apply flex w-full mt-[13px] md:mt-0 md:inline-flex p-0 border-0;
+
+      .cky-btn {
+        @apply text-base uppercase block max-w-none shadow-none border-[1px] rounded-[20px] px-[20px] py-[5px] flex-none w-full md:w-[238px];
+        
+        text-shadow: none;
+
+        &.cky-btn-preferences {
+          @apply mr-0 md:mr-[22px] hidden;
+        }
+
+        &.cky-btn-reject {
+          @apply mr-auto hidden;
+        }
+      }
+    }
+  }
+}
+
+// Collasped cookies setting bar
+.cky-consent-container,
+.cky-consent-container.cky-box-bottom-right {
+  @apply left-[15px] right-[15px] bottom-[19px] w-auto md:w-[789px];
+
+  @media (min-width: 992px) {
+    left: auto;
+    right: 30px;
+    bottom: 24px;
+  }
+
+  * {
+    cursor: auto;
+  }
+
+  .cky-consent-bar {
+    @apply rounded-[20px] px-4 py-[24px] md:px-[40px] md:py-[34px];
+  }
+
+  .cky-notice {
+    @apply block lg:flex justify-between items-center;
+
+    .cky-title {
+      @apply mb-0 whitespace-nowrap font-normal font-twk;
+    }
+
+    .cky-notice-group {
+      @apply w-full flex flex-col md:flex-row;
+
+      .cky-notice-des {
+        @apply mx-0 px-0 mt-0 mb-4 md:m-0 overflow-hidden;
+
+        p {
+          @apply text-base leading-6;
+        }
+
+        .policy-link {
+          @apply underline cursor-pointer text-base leading-4;
+        }
+      }
+
+      .cky-notice-btn-wrapper {
+        @apply ml-0 flex flex-row mt-0 px-0 md:w-[70%] justify-center md:justify-end flex-none;
+
+        .cky-btn {
+          @apply block uppercase text-base flex-none md:inline-block w-full md:w-[50%] border-[1px] rounded-[20px] mt-[15px] md:mt-0 px-[20px] py-[5px];
+
+          &.cky-btn-customize {
+            width: auto !important;
+          }
+        }
+
+        .cky-btn-reject {
+          @apply mr-0 sm:mr-[22px];
+        }
+
+        .cky-btn-customize {
+          @apply mr-0 mt-0 md:mr-[22px] border-0 underline px-0 py-0 w-auto;
+
+          order: initial;
+        }
+      }
+    }
+  }
+}
+
+html {
+  &.zh {
+    .cky-consent-container.cky-box-bottom-right .cky-notice .cky-notice-group .cky-notice-btn-wrapper {
+      @apply md:w-[65%];
+    }
+  }
+
+  &.vi {
+    .cky-consent-container.cky-box-bottom-right .cky-notice .cky-notice-group .cky-notice-btn-wrapper {
+      @apply md:w-[60%];
+            
+      .cky-btn {
+        @apply md:w-[194px];
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cky-modal .cky-preference-center {
+    border-radius: 0;
+  }
+}

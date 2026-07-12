@@ -1,0 +1,18 @@
+.skeleton-shine {
+  &:empty {
+    @apply block bg-no-repeat relative;
+
+    background-color: #ddd;
+    background-image:
+      linear-gradient(
+        to right,
+        #ddd 0%,
+        #d2d2d2 20%,
+        #ddd 40%,
+        #ddd 100%
+      );
+    background-size: 1600px 100%;
+    background-position: 100% 0;
+    animation: placeholderShimmer 1s linear infinite;
+  }
+}

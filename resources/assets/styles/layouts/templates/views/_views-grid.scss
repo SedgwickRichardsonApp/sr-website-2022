@@ -1,0 +1,184 @@
+.tpl-views-grid {
+  @apply pb-20 md:pb-[140px];
+
+  .tabs {
+    .tab-header {
+      @apply flex items-center gap-8 md:gap-16 mb-5 md:mb-8;
+
+      .tab-item {
+        @apply overflow-hidden pb-1;
+        
+        animation: fade-in 1s cubic-bezier(0.28, 0, 0.49, 1) forwards;
+
+        & > div {
+          @apply relative mb-0 text-base lg:text-xl font-normal transition-all duration-700;
+
+          &::after {
+            content: "";
+    
+            @apply w-full h-[2px] absolute bottom-0 left-0 bg-black-400 opacity-100;
+
+            animation: trace-out 0.25s ease-out 0s forwards;
+          }
+        }
+          
+        &:hover,
+        &:active {
+          & > div::after {
+            @apply bg-black-400 opacity-100;
+
+            animation: trace-in 0.25s ease-out 0s forwards;
+          }
+        }
+
+        &.active {
+          & > div::after {
+            @apply bg-black-400 opacity-100;
+            
+            animation: trace-in 0s ease-out 0s forwards;
+          }
+        }
+      }
+    }
+
+    .panel-body {
+      .panel-item {
+        @apply block relative transition-all;
+
+        &.hidden {
+          display: none;
+        }
+
+        .view-image-wrapper {
+          padding-top: 70.2%;
+          position: relative;
+
+          .view-image,
+          .acf-video-player {
+            position: absolute;
+            top: 0;
+            height: auto;
+            min-height: 100%;
+            width: 100%;
+            // height: 100%;
+            object-fit: cover;
+
+            &.iframe {
+              transform: scale(1.8);
+              
+              > div,
+              > iframe {
+                height: 100% !important;
+                position: absolute !important;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0 !important;
+              }
+            }
+          }
+
+          &.skeleton-shine {
+            margin-bottom: 0.75rem;
+          }
+        }
+
+        .view-author {
+          @apply text-black-300 text-lg mt-4;
+
+          line-height: 1.2;
+        }
+
+        .view-title {
+          @apply text-[1.125rem] font-twk mt-[2px] -tracking-[0.0225rem] font-light;
+
+          line-height: 1.2;
+
+          @screen md {
+            @apply text-[1.375rem] -tracking-[0.055rem] mt-[2px];
+          }
+
+          &.skeleton-shine {
+            @apply w-full;
+      
+            height: 24px;
+      
+            @screen md {
+              height: 29px;
+            }
+          }
+        }
+
+        &.featured {
+          // .view-image-wrapper {
+          //   width: 100%; //46.46vw;
+          //   aspect-ratio: 1 / 1.11;
+          //   padding-top: 111%;
+
+          //   .acf-video-player.iframe,
+          //   .view-image.iframe {
+          //     transform: scale(1.9);
+          //   }
+          // }
+
+          // .view-title {
+          //   @apply text-[1.125rem] md:text-[2rem];
+          // }
+
+          // @screen sm {
+          //   @apply col-span-2 row-span-2;
+          // }
+        }
+
+        &.circle {
+          // .view-image-wrapper {
+          //   width: 100%; //21.875vw;
+          //   aspect-ratio: 1;
+          //   border-radius: 100%;
+
+          //   img {
+          //     transition: none !important; //layout bug: will flickering a square
+          //   }
+          // }
+        }
+
+        &.square {
+          // @apply col-span-1 row-span-1;
+
+          // .view-image-wrapper {
+          //   width: 100%; //21.875vw;
+          //   aspect-ratio: 1;
+          // }
+        }
+      }
+    }
+  }
+
+  
+  .view-more-button-wrapper {
+    @apply text-center mb-0 px-4 mt-11 md:mt-30;
+
+    .view-more-button {
+      @apply mx-auto text-base font-medium py-[15px] px-[20px];
+    
+      &.hidden {
+        display: none;
+      }
+
+      .btn-label {
+        @apply text-base mr-[10px] uppercase;
+      }
+    
+      .btn-icon {
+        @apply w-[17px] h-[15px];
+      }
+    
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.tpl-homepage-contact {
+  @apply py-22 px-[15px] md:pt-30 md:pb-[102px] bg-blue-100;
+}
+
+.contact-heading {
+  @apply max-w-[910px] mx-auto font-twk text-center text-[47px] -tracking-[1.88px] leading-[1.2];
+  
+  @screen md {
+    @apply text-[5.75rem] tracking-[-0.231rem] leading-[1.2];
+  }
+}
+
+.home-contact-button {
+  @apply max-w-[59.4vw] w-full mx-auto text-base py-[11px] px-[38.5px];
+
+  .btn-label {
+    @apply text-base mr-[10px] leading-5;
+  }
+
+  .btn-icon {
+    @apply w-[14px] h-[14px];
+  }
+
+  @screen sm {
+    @apply w-[201px];
+  }
+
+  @screen md {
+    @apply max-w-[none] w-auto text-lg py-[14px] px-5;
+  }
+
+  &:hover {
+    .btn-icon img {
+      filter: invert(1);
+    }
+  }
+}
+
+.view-work-button-wrapper {
+  @apply text-center mb-30 px-4 md:mb-[140px] md:mt-[72px];
+
+  .home-contact-button {
+    @apply px-[17.5px];
+  }
+}
+
+.home-contact-button-wrapper {
+  @apply text-center mt-12;
+
+  @screen sm {
+    @apply mt-16;
+  }
+}
+
+.js-bg-black {
+  .home-contact-button {
+    filter: invert(1);
+  }
+}

@@ -1,0 +1,125 @@
+.tpl-contact-form {
+  @apply py-20 md:py-40;
+}
+
+.tpl-contact-form,
+.contact-modal {
+  body.contact-modal-mode & {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  &.right-side-modal .modal-content {
+    @apply md:px-[30px] lg:px-10;
+
+    .contact-form-wrapper {
+      opacity: 0;
+      transition: opacity 0.5s ease 0.3s;
+    }
+
+    body.contact-modal-mode & {
+      @apply opacity-100;
+
+      .contact-form-wrapper {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .contact-title {
+    @apply text-5xl mb-0;
+
+    @screen md {
+      @apply text-7xl;
+    }
+  }
+
+  .contact-form2,
+  .contact-form {
+    @screen lg {
+      @apply mt-[120px] max-w-[38.3vw] w-full;
+    }
+
+    input[type="submit"] {
+      @apply hidden;
+    }
+
+    .ajax-loader,
+    .wpcf7-spinner {
+      @apply m-0;
+    }
+
+    .submit-button-wrapper {
+      @apply mt-0;
+    }
+
+    .submit-button {
+      @apply w-full text-base md:text-lg py-[0.625rem] px-[0.875rem] mt-[2.813rem] lg:mt-[3rem];
+
+      .btn-label {
+        @apply text-base;
+      }
+
+      .btn-icon {
+        @apply w-[14px] h-[14px];
+      }
+
+      @screen md {
+        @apply w-[150px];
+      }
+
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  .contact-form2 {
+    @screen lg {
+      @apply mt-[0];
+    }
+  }
+
+  .wpcf7-form {
+    &.sent {
+      .wpcf7-response-output {
+        @apply hidden;
+      }
+    }
+  }
+
+  .contact-thank-you {
+    @apply flex flex-col justify-between h-full;
+
+    @screen md {
+      @apply h-auto;
+    }
+
+    .contact-thank-you-message {
+      @apply text-5xl mb-0;
+
+      @screen md {
+        @apply text-7xl mb-10;
+      }
+    }
+
+    .home-button {
+      @apply w-full;
+
+      @screen md {
+        @apply w-auto;
+      }
+
+      &:hover {
+        .btn-icon img {
+          filter: invert(1);
+        }
+      }
+
+      .btn-icon {
+        @apply w-[17px];
+      }
+    }
+  }
+}

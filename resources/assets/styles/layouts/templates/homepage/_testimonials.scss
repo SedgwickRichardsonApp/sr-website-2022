@@ -1,0 +1,70 @@
+.tpl-homepage-testimonials {
+  @apply bg-black-400 text-white-100 pt-[100px] pb-[100px];
+
+  .testimonials-section-container {
+    @apply grid grid-flow-row md:grid-cols-2 gap-12 md:gap-[10vw] max-w-[1380px] mx-auto justify-between;
+  
+    @screen md {
+      grid-template-columns: 1fr minmax(auto, 788px);
+    }
+
+    .swiper-button-wrapper {
+      @apply hidden md:inline-grid grid-flow-col gap-4 w-fit;
+    }
+
+    .swiper-nav-button {
+      @apply block md:w-8;
+
+      filter: invert(0);
+      
+      &:disabled {
+        filter: invert(0.7);
+      }
+
+      &:hover {
+        filter: invert(0);
+      }
+    }
+
+    .swiper-nav-prev {
+      transform: rotate(180deg);
+    }
+
+    .testimonials-swiper-container {
+      @apply overflow-hidden;
+    }
+  }
+  
+  .testimonials-wrapper {
+    @apply justify-between flex flex-col;
+  }
+
+  .testimonials-title {
+    @apply w-auto md:w-[325px] text-[34px] -tracking-[1px] md:text-6xl md:-tracking-[2.4px] mb-0;
+
+    line-height: 1.2 !important;
+  }
+
+  .client-comment {
+    @apply grid justify-between gap-12 md:gap-15 leading-[1.2];
+
+    width: 100% !important;
+  }
+
+  .cm-from-wrapper {
+    @apply flex gap-1 flex-col;
+  }
+
+  .cm-comment {
+    @apply font-twk text-2xl md:text-[32px] leading-[1.2] -tracking-[0.96px] md:-tracking-[1.28px];
+  }
+
+  .cm-client {
+    @apply font-twk text-lg md:text-[22px] -tracking-[0.72px] md:-tracking-[0.88px] leading-[1.2];
+  }
+
+  .cm-company,
+  .cm-title {
+    @apply font-twk text-secondary text-lg font-bold md:text-[22px] -tracking-[0.4px] md:-tracking-[0.4px] leading-[1.2];
+  }
+}

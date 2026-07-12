@@ -1,0 +1,42 @@
+.btn {
+  @apply inline-flex items-center justify-center border border-solid border-primary text-primary text-sm font-medium leading-[18px] px-9 py-4 uppercase duration-300;
+
+  border-radius: 50px;
+
+  .btn-label {
+    @apply mr-1;
+
+    @screen md {
+      @apply mr-2;
+    }
+  }
+
+  .btn-icon {
+    @apply duration-300;
+
+    svg {
+      width: 17px;
+
+      @screen md {
+        width: 20px;
+      }
+
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
+
+  &:hover {
+    @apply bg-primary text-white-100;
+
+    .btn-icon {
+      @apply -rotate-45;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    @apply pointer-events-none opacity-60;
+  }
+}

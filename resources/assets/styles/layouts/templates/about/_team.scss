@@ -1,0 +1,50 @@
+.tpl-about-team {
+  @apply pt-10 pb-20 lg:pt-[75px] lg:pb-[8.75rem];
+
+  .team-title {
+    margin-bottom: 20px !important;
+    line-height: 38px;
+
+    @apply text-[32px] tracking-[-1px] lg:tracking-[-2.4px] lg:text-6xl mb-[24px];
+  }
+
+  .team-description {
+    @apply text-lg mb-1 md:mb-8;
+  }
+
+  .team-members-wrapper {
+    @apply mt-5 lg:mt-12;
+  }
+
+  .team-members-grid .col-span-1 img {
+    aspect-ratio: 1 / 1.39423;
+  }
+
+  .team-member-image-wrapper {
+    @apply block relative overflow-hidden mb-3 w-full;
+
+    position: relative;
+    margin-bottom: 0.75rem;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .team-member-image {
+    // @apply absolute inset-0 h-full w-full object-cover;
+    object-fit: cover;
+  }
+
+  .team-member-title {
+    @apply text-lg font-medium font-twk leading-[23.78px] tracking-[-0.4px];
+
+    @screen md {
+      @apply text-lg leading-[26.42px] tracking-[-0.4px];
+    }
+  }
+
+  .team-member-position {
+    @apply text-base font-twk leading-[22.4px] tracking-[-0.3px];
+  }
+}

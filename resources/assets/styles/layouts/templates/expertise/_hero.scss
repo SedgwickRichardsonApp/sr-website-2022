@@ -1,0 +1,83 @@
+.tpl-expertise-hero {
+  @apply bg-black-400 text-white-100 h-[100vh];
+
+  .container-fluid {
+    @apply h-full px-0 overflow-hidden;
+  }
+
+  .content-wrapper {
+    @apply relative min-h-[550px] h-full;
+  }
+
+  .hero-title-wrapper {
+    @apply absolute top-0 left-0 bottom-0 flex flex-col justify-center z-1 pl-[15px];
+
+    @screen md {
+      @apply pl-[30px];
+    }
+
+    @screen lg {
+      @apply mt-[-3rem];
+    }
+  }
+
+  .hero-subtitle {
+    @apply indent-[3px] text-grey-400 text-lg uppercase tracking-[-0.3px];
+
+    line-height: 21px !important;
+
+    @screen lg {
+      @apply indent-[5px] text-[1.375rem] tracking-[-0.02em];
+
+      line-height: 29px !important;
+    }
+  }
+
+  .hero-title {
+    @apply mb-[10px] text-[47px] leading-[56.4px] tracking-[-0.04em];
+
+    transition: font-size 0.3s ease;
+
+    @screen md {
+      @apply mb-4 text-[74px];
+    }
+
+    @screen lg {
+      @apply text-[92px] leading-[101.2px] tracking-[-3.7px];
+    }
+  }
+
+  .hero-animation {
+    @apply absolute -right-[15px] h-auto top-0 bottom-0 left-auto w-auto;
+
+    &.place-branding {
+      height: 101%;
+    }
+
+    @screen md {
+      @apply right-[2vw];
+    }
+
+    &.has-mobile-animation {
+      @apply hidden;
+
+      @screen lg {
+        @apply block;
+
+        aspect-ratio: 0.85;
+      }
+    }
+  }
+
+  .hero-mobile-animation {
+    @apply block;
+
+    &.place-branding {
+      height: 101%;
+    }
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+}

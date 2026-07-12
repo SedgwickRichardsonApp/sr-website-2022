@@ -1,0 +1,1 @@
+@include('singles.post-types.testimonials.details')

@@ -1,0 +1,29 @@
+.tpl-contact-intro {
+  @apply pb-8 md:pb-20;
+
+  .content-wrapper {
+    @apply flex flex-wrap max-w-full mx-auto;
+  }
+
+  .left {
+    @apply w-full md:w-auto;
+
+    h5 {
+      @apply font-medium text-[24px] md:text-[37px] mb-4;
+    }
+  }
+
+  .right {
+    @apply w-full text-[24px] md:text-[37px] ml-auto;
+
+    p {
+      @apply text-[1.5rem] md:text-[37px] font-twk tracking-[-0.7px];
+
+      line-height: 1.8rem;
+
+      @screen md {
+        line-height: 2.775rem;
+      }
+    }
+  }
+}

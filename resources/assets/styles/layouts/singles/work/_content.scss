@@ -1,0 +1,59 @@
+.single-cpt-work-data {
+  .wp-block,
+  .acf-block {
+    .container {
+      @apply px-[15px] md:px-[30px];
+
+      blockquote {
+        p {
+          @apply font-medium text-base leading-[22.4px] md:text-lg md:leading-[25.2px];
+        }
+
+        p:last-child {
+          @apply font-normal mt-7 text-sm md:text-base not-italic;
+        }
+
+        cite {
+          @apply mt-7 text-sm md:text-base not-italic;
+        }
+      }
+    }
+  }
+
+  .acf-video-block {
+    @apply px-[15px] md:px-[30px];
+  }
+
+  .acf-video-player {
+    // aspect-ratio: 16 / 9;
+    // object-fit: cover;
+
+    &.iframe {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transform: scale(1);
+
+      > div,
+      > iframe {
+        height: 100% !important;
+        position: absolute !important;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .title-left-content-right-block {
+    .title {
+      @apply max-w-[355px];
+    }
+  }
+
+  .image-slider-block .item-image-wrapper {
+    padding-bottom: 35.416vw;
+    aspect-ratio: 1 / 0.5629;
+  }
+}

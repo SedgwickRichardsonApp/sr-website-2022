@@ -1,0 +1,77 @@
+.tpl-about-hero {
+  @apply bg-black-400 text-white-100 overflow-hidden h-screen;
+
+  .container-fluid {
+    @apply h-full;
+  }
+
+  .content-wrapper {
+    @apply relative h-full flex items-start;
+  }
+
+  .hero-title-wrapper {
+    @apply relative z-10;
+  }
+
+  .hero-title {
+    @apply text-[2.9375rem] mb-0 mt-[160px] -tracking-[0.1175rem];
+
+    line-height: 1.181489;
+    transition: font-size 0.5s ease;
+
+    @screen md {
+      @apply text-[4rem];
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      @apply text-[3.75rem];
+    }
+
+    @screen lg {
+      @apply text-[5.75rem] -tracking-[0.23rem] font-normal;
+
+      line-height: 1.09782;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+      @apply text-[5.5rem];
+    }
+  }
+
+  .hero-animation {
+    @apply absolute top-[10vh] -right-[12vh] bottom-auto -left-[12vh] w-auto;
+
+    height: calc(60.22vh * 1.7);
+    transition: all 0.5s ease;
+
+    @screen md {
+      top: 10vh;
+      right: 0;
+      left: 0;
+      height: calc(60.22vh * 1.7);
+    }
+
+    @screen lg {
+      @apply -top-[1vh] -right-[10.5%] bottom-auto left-auto w-auto;
+
+      height: calc(60.22vh * 1.95);
+      min-width: calc(60.22vh * 1.95);
+    }
+
+    &.has-mobile-animation {
+      @apply hidden;
+
+      @screen lg {
+        @apply block;
+      }
+    }
+  }
+
+  .hero-mobile-animation {
+    @apply absolute block inset-0;
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+}

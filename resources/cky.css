@@ -1,0 +1,69 @@
+/* .cky-modal .cky-preference-center {
+  border-radius: 20px;
+}
+
+.cky-modal{
+  cursor: auto;
+  transform: none;
+  top: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px !important;
+  transition: all 1s linear;
+}
+
+.cky-modal.cky-modal-open {
+  transform: none;
+  top: 20vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s linear;
+}
+
+.cky-preference-center{
+  max-height: none;
+  width: 100%;
+}
+
+.cky-modal .cky-prefrence-btn-wrapper .cky-btn {
+  border-radius: 20px;
+  display: block;
+  max-width: none;
+  text-shadow: none;
+  box-shadow: none;
+  flex: none;
+}
+
+.cky-modal .cky-prefrence-btn-wrapper .cky-btn.cky-btn-reject {
+  margin-right: auto;
+}
+
+.cky-accordion {
+  padding: 15px 0;
+  margin-top: 0;
+}
+
+.cky-accordion-header-des {
+  display: none;
+}
+
+.cky-accordion-wrapper {
+  border-color: inherit;
+  border-radius: 0;
+}
+
+.cky-preference-content-wrapper {
+  border-bottom: 0;
+}
+
+.cky-preference-header {
+  border-radius: 0;
+  padding: 22px 24px 0 24px;
+  border-bottom: 0;
+}
+
+div[data-cky-tag="detail-powered-by"] {
+  display: none;
+} */

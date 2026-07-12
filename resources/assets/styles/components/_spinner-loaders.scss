@@ -1,0 +1,9 @@
+.spinner-loader {
+  @apply border-4 border-solid rounded-full;
+
+  animation: spinnerRotate 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fd4c1b;
+  border-top-color: darken(#fd4c1b, 40%);
+  height: 30px;
+  width: 30px;
+}

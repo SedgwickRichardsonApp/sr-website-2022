@@ -1,0 +1,148 @@
+.tpl-contact-offices {
+  @apply pt-12 md:pt-20 md:pb-[62px];
+
+  .container-fluid {
+    // @apply pr-0 md:pr-[30px];
+  }
+
+  .office-image-wrapper {
+    @apply mb-[0.8rem];
+  }
+
+  .office-details-wrapper {
+    .city-wrapper {
+      @apply mb-5;
+    }
+
+    p {
+      @apply mb-[0.3125rem];
+
+      line-height: 1.418rem;
+    }
+
+    /*
+    .country {
+      @apply font-twk font-medium text-base -tracking-[0.002rem];
+
+      line-height: 1.3125;
+    } */
+
+    .country,
+    .city {
+      @apply text-5xl font-twk text-base -tracking-[0.002rem];
+
+      line-height: 1.3125;
+    }
+
+    .cursor-copy-email {
+      color: #fd4c1b;
+      text-decoration: underline;
+    }
+
+    .email {
+      // a,
+      // span {
+      //   @apply underline underline-offset-4;
+      // }
+
+      &.element-mobile {
+        display: none;
+      }
+    }
+
+    @screen lg {
+      @apply text-lg -tracking-[0.4px];
+
+      line-height: 1.22222;
+
+      .city {
+        @apply text-lg -tracking-[0.3px];
+
+        line-height: 1.277777778;
+      }
+    }
+  }
+
+  // .swiper-container {
+  //   @apply relative pb-10 md:pb-24 overflow-hidden pr-[15px] md:pr-0;
+
+  //   .image-wrapper {
+  //     position: relative;
+  //     width: 100%;
+  //     aspect-ratio: 0.7504;
+  //     height: auto;
+
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: cover;
+  //     }
+
+  //     @screen md {
+  //       width: 30.07vw;
+  //     }
+  //   }
+
+  //   .swiper-scrollbar {
+  //     @apply rounded-none h-[2px];
+
+  //     max-width: calc(100vw - 30px);
+  //     transform: translateX(-1%);
+
+  //     @screen md {
+  //       @apply max-w-[46.53vw] translate-x-2/4;
+  //     }
+  //   }
+
+  //   .swiper-scrollbar-drag {
+  //     @apply bg-black-400 rounded-none;
+  //   }
+
+  //   @screen lg {
+  //     @apply pb-20;
+  //   }
+  // }
+
+  // .swiper-button-wrapper {
+  //   @apply absolute inset-0 h-full w-full;
+  // }
+
+  // .swiper-button-next,
+  // .swiper-button-prev {
+  //   @apply hidden absolute top-0 h-full mt-0;
+
+  //   &::after {
+  //     content: none;
+  //   }
+  // }
+
+  // .swiper-button-next {
+  //   @apply right-0;
+  // }
+
+  // .swiper-button-prev {
+  //   @apply left-0;
+  // }
+
+  // .swiper-pagination {
+  //   @apply bottom-0 ;
+
+  //   top: unset;
+
+  //   .swiper-pagination-progressbar-fill {
+  //     @apply bg-black-100;
+  //   }
+  // }
+}
+
+.mobile .tpl-contact-offices .office-details-wrapper {
+  .email {
+    &.element-desktop {
+      display: none;
+    }
+
+    &.element-mobile {
+      display: block;
+    }
+  }
+}

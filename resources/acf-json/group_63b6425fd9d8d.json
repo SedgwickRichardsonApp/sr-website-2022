@@ -1,0 +1,60 @@
+{
+    "key": "group_63b6425fd9d8d",
+    "title": "Expertise-icon",
+    "fields": [
+        {
+            "key": "field_63b64260833fe",
+            "label": "Cursor Icon",
+            "name": "cursor-icon",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "operator": "",
+                        "value": ""
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cursor-none": "None",
+                "cursor-brand-building": "Brand Building",
+                "cursor-employer-branding": "Employer Branding",
+                "cursor-investment-branding": "Investment Branding",
+                "cursor-place-branding": "Place Branding",
+                "cursor-sustainability": "Sustainability"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt-work"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1672968846
+}

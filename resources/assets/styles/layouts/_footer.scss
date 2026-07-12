@@ -1,0 +1,105 @@
+footer {
+  @apply bg-black-400;
+  //background: linear-gradient(to bottom, #0a0a10 80%, rgba(10, 10, 16, 0.8));
+  // background: white;
+  // opacity: 0.7;
+  // background: linear-gradient(to bottom, #e4eff5 80%, rgba(10, 10, 16, 0.8));
+  // transition: background-color 0.3s cubic-bezier(0.72, 0, 0.28, 1);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1);//cubic-bezier(0.72, 0, 0.28, 1);
+  transition-delay: 0.2s;
+
+  .content-wrapper {
+    @apply flex items-end justify-between pt-4 pb-6;
+
+    @screen md {
+      @apply pt-16 pb-12;
+    }
+  }
+  
+  .social-links {
+    @apply flex items-center;
+  }
+  
+  .social-link-item {
+    @apply w-[16.5px] md:w-[30.72px] block;
+
+    &.social-wechat {
+      @apply w-[23px] md:w-[36px] ml-[17.2px] md:ml-[28px];
+    }
+
+    &.social-fb {
+      @apply w-[17px] md:w-[36px] ml-[20.3px] md:ml-[28px];
+    }
+  }
+
+  .logo-item {
+    @apply w-[5.563rem];
+
+    @screen md {
+      @apply w-[8.813rem];
+    }
+  }
+
+  .footer-copyright {
+    @apply bg-black-400 pt-4 pb-7;
+
+    @screen md {
+      @apply py-6;
+    }
+  }
+
+  .copyright-wrapper {
+    @apply flex flex-col justify-between text-[#8b8b8b] text-sm space-y-1;
+
+    @screen md {
+      @apply flex-row items-center space-y-0;
+    }
+
+    .copyright {
+      @apply font-tt font-medium text-sm leading-6 -tracking-[0.21px];
+    }
+
+    .menu-footer-menu {
+      .cursor-link {
+        @apply text-sm leading-6 -tracking-[0.21px];
+      }
+    }
+  }
+
+  .tagline {
+    @apply font-bold font-tt text-lg leading-6 -tracking-[0.7px];
+  }
+
+  .menu {
+    @apply flex flex-row space-y-1;
+
+    @screen md {
+      @apply flex-row items-center space-x-2 space-y-0;
+    }
+  }
+
+  .menu-item {
+    a {
+      &:hover,
+      &:active {
+        @apply opacity-100 underline;
+      }
+    }
+  }
+}
+
+body.js-bg-blue {
+  footer {
+    @apply bg-black-400 opacity-100;
+    // opacity: 1;
+    // background: linear-gradient(to bottom, #e4eff5 80%, rgba(10, 10, 16, 0.8));
+  }
+}
+
+body.js-bg-black {
+  footer {
+    @apply bg-black-400 opacity-100;
+    // opacity: 1;
+    // background: linear-gradient(to bottom, #0a0a10 80%, rgba(10, 10, 16, 0.8));
+  }
+}

@@ -1,0 +1,123 @@
+label {
+  @apply relative;
+}
+
+.input-grid {
+  @apply grid grid-cols-1;
+
+  @screen md {
+    @apply grid-cols-2 gap-6;
+  }
+}
+
+.input-col {
+  @apply col-span-1;
+}
+
+.input-wrapper {
+  @apply mb-4;
+
+  @screen md {
+    @apply mb-3;
+  }
+
+  input,
+  textarea {
+    @apply w-full;
+
+    &.wpcf7-not-valid {
+      @apply bg-opacity-10 border-[#DC004A];
+    }
+  }
+}
+
+.input-floating-label {
+  @apply relative;
+
+  label {
+    @apply absolute top-6 text-[#aaa] text-base font-medium pointer-events-none whitespace-nowrap z-1;
+
+    transition: all 0.25s ease-in-out;
+
+    @screen md {
+      @apply top-6 text-lg;
+    }
+  }
+
+  input,
+  textarea {
+    // added rounded-none for iphone to prevent rounded lines
+    @apply border-b border-black-400 rounded-none text-black-400 text-base font-medium pt-[1.438rem] pb-[0.938rem] rounded-none;
+
+    @screen md {
+      @apply text-lg;
+    }
+  }
+
+  textarea {
+    @apply h-[150px] mt-8 pt-0;
+  }
+
+  &.floated {
+    label {
+      @apply text-xs top-0;
+
+      @screen md {
+        @apply text-sm;
+      }
+    }
+
+    // input,
+    // textarea {
+    //   @apply pt-7 md:pt-[1.9rem] pb-[0.7rem];
+    // }
+  }
+}
+
+.wpcf7-form {
+  @apply relative;
+
+  .wpcf7-not-valid-tip {
+    @apply text-[10px] md:text-xs mt-[4px] font-medium text-[#DC004A];
+  }
+
+  .ajax-loader,
+  .wpcf7-spinner {
+    @apply bg-transparent rounded-full mx-4;
+
+    animation: spinnerRotate 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    background-image: none !important;
+    border: 4px solid #fd4c1b !important;
+    border-top: 4px solid darken(#fd4c1b, 40%) !important;
+    height: 30px !important;
+    width: 30px !important;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .wpcf7-response-output {
+    @apply text-[#DC004A] text-xs font-medium text-left;
+
+    margin-top: 1rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    border-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  &.sent {
+    .wpcf7-response-output {
+      @apply text-black-100;
+    }
+  }
+
+  &.submitting {
+    .ajax-loader,
+    .wpcf7-spinner {
+      display: inline;
+    }
+  }
+}

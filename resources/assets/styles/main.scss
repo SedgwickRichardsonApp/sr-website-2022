@@ -1,0 +1,38 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Import theme styles */
+// Common
+@import "common/variables";
+@import "common/fonts";
+@import "common/keyframes";
+@import "common/global";
+
+// Components
+@import "components/buttons";
+@import "components/cursors";
+@import "components/forms";
+@import "components/modals";
+@import "components/skeleton-shines";
+@import "components/spinner-loaders";
+@import "components/wp-classes";
+@import "components/copied-prompt";
+@import "components/sticky-contact-box";
+
+// Layouts
+@import "layouts/404";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/acf-blocks";
+@import "layouts/sections";
+@import "layouts/singles";
+@import "layouts/templates";
+@import "layouts/tinymce";
+@import "layouts/cookie-banner";
+@import "layouts/zh";
+@import "layouts/vi";

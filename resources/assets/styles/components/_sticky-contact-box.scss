@@ -1,0 +1,15 @@
+.sticky-contact-container {
+  @apply hidden bg-black-100 text-white-100 items-center gap-1 md:gap-2 py-[10px] px-[12px] md:py-[14px] md:px-[23px] rounded-[50px];
+  
+  html body.cpt-work-template-default.single-cpt-work & {
+    @apply flex fixed bottom-6 right-4 invert-0;
+  }
+
+  html body.cpt-work-template-default.single-cpt-work.js-body-bg-black & {
+    filter: invert(1);
+  }
+
+  .contact-msg {
+    @apply text-[10px] md:text-base uppercase;
+  }
+}

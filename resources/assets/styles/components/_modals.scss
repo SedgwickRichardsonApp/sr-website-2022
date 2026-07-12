@@ -1,0 +1,118 @@
+.right-side-modal {
+  @apply fixed inset-0 overflow-hidden h-full w-full opacity-0 pointer-events-none z-100;
+
+  // transition: all 0.5s ease;
+
+  body.admin-bar & {
+    height: calc(100% - var(--g-admin-bar-small));
+    top: var(--g-admin-bar-small);
+
+    @media (max-width: $screen-admin-min) {
+      height: calc(100% - var(--g-admin-bar-large));
+      top: var(--g-admin-bar-large);
+    }
+  }
+
+  .modal-overlay {
+    @apply absolute inset-0 h-full w-full;
+
+    background-color: rgba(10, 10, 16, 0.85);
+  }
+
+  .modal-content {
+    @apply relative bg-white-100 h-full overflow-y-auto px-4 py-10;
+
+    transition: opacity 0.5s ease 0s;
+
+    @screen lg {
+      @apply py-11 pr-8 pl-10 ml-[17.36111111%];
+    }
+
+    .modal-body {
+      @apply opacity-0;
+
+      transition: opacity 0.5s ease 0s;
+    }
+  }
+
+  .modal-close {
+    @apply absolute top-5 right-4 flex items-center text-sm font-twk font-medium -tracking-[0.2px];
+
+    @screen lg {
+      @apply top-8 right-9 text-base;
+    }
+
+    .label {
+      @apply mr-3 font-tt text-base;
+
+      @screen lg {
+        @apply text-base;
+      }
+    }
+
+    .icon svg {
+      @apply h-[1.125rem] w-[1.125rem];
+
+      @screen lg {
+        @apply h-[24px] w-[24px];
+      }
+    }
+  }
+
+  .modal-title {
+    @apply inline-block items-center text-base font-medium mb-2;
+
+    @screen md {
+      @apply text-lg mb-[0.813rem];
+    }
+  }
+}
+
+.bottom-side-modal {
+  @apply fixed inset-0 overflow-hidden h-full w-full opacity-0 pointer-events-none z-100;
+
+  transition: all 0.5s ease;
+
+  // body.admin-bar & {
+  //   height: calc(100% - var(--g-admin-bar-small));
+  //   top: var(--g-admin-bar-small);
+
+  //   @media (max-width: $screen-admin-min) {
+  //     height: calc(100% - var(--g-admin-bar-large));
+  //     top: var(--g-admin-bar-large);
+  //   }
+  // }
+
+  .modal-content {
+    @apply absolute bottom-0 bg-white-100 h-auto max-h-full w-full overflow-y-auto pointer-events-none;
+
+    transform: translateY(100%);
+    // transition: all 0.5s ease;
+  }
+
+  .modal-close {
+    @apply absolute top-5 right-4 flex items-center text-sm font-twk font-medium -tracking-[0.2px];
+
+    @screen lg {
+      @apply top-8 right-9 text-base;
+    }
+
+    .label {
+      @apply mr-[0.531rem] md:mr-[0.688rem] text-sm lg:text-base;
+    }
+
+    .icon svg {
+      @apply h-[18px] w-[18px];
+
+      @screen lg {
+        @apply h-[24px] w-[24px];
+      }
+    }
+  }
+}
+
+@import "modals/contact";
+@import "modals/jobs";
+@import "modals/people";
+@import "modals/search";
+@import "modals/view-restriction";

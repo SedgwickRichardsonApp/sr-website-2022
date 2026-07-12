@@ -1,0 +1,77 @@
+@keyframes marqueePart1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueePart2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes placeholderShimmer {
+  from {
+    background-position: -936px 0;
+  }
+
+  to {
+    background-position: 936px 0;
+  }
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes trace-in {
+  0% {
+    transform: translate3d(-101%, 0, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes trace-out {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(101%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
