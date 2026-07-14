@@ -68,15 +68,15 @@ add_action( 'wp_enqueue_scripts',
       $assets_js['js-typed-js'] = 'lib/typed.js/typed.min.js';
     }
 
-    if (
-      is_singular( [
-        'cpt-work',
-        'cpt-views',
-      ] ) &&
-      ! empty( $api_addthis_profile_id = get_field( 'api_addthis_profile_id', 'options' ) )
-    ) {
-      wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=' . $api_addthis_profile_id, [], null, true );
-    }
+    // if (
+    //   is_singular( [
+    //     'cpt-work',
+    //     'cpt-views',
+    //   ] ) &&
+    //   ! empty( $api_addthis_profile_id = get_field( 'api_addthis_profile_id', 'options' ) )
+    // ) {
+    //   wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=' . $api_addthis_profile_id, [], null, true );
+    // }
 
     foreach ( $assets_css as $handle => $path ) {
       wp_enqueue_style( $handle, get_stylesheet_directory_uri() . '/' . $path, [], ASSETS_VERSION );
