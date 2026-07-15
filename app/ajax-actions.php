@@ -24,13 +24,13 @@ function myajax_get_search_autocomplete_data() {
       'is_highlight' => true,
       'is_other'     => false,
     ],
-    [
-      'post_type'    => 'cpt-testimonials',
-      'title'        => 'Testimonials',
-      'title_text'   => $text['testimonials'],
-      'is_highlight' => true,
-      'is_other'     => false,
-    ],
+    // [
+    //   'post_type'    => 'cpt-testimonials',
+    //   'title'        => 'Testimonials',
+    //   'title_text'   => $text['testimonials'],
+    //   'is_highlight' => true,
+    //   'is_other'     => false,
+    // ],
     [
       'post_type'    => 'cpt-views',
       'title'        => 'Views',
