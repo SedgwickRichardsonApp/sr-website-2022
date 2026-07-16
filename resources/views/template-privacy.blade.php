@@ -8,11 +8,11 @@
   @while(have_posts()) @php the_post() @endphp
   <section class="privacy-legal-content">
     <div class="container">
-      <h3>
+      <h1 class="h3">
         @unless ( empty( $content['page_title'] ) )
         {!! $content['page_title'] !!}
         @endunless
-      </h3>
+      </h1>
 
       <div class="content-wrapper">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-7">

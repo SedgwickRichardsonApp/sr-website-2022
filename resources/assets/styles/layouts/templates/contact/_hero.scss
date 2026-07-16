@@ -9,7 +9,7 @@
     }
 
     .hello-word-title {
-      @apply -tracking-[1.9px];
+      @apply -tracking-[1.9px] mb-0;
 
       @screen lg {
         @apply -tracking-[0.231rem] text-[5.75rem];

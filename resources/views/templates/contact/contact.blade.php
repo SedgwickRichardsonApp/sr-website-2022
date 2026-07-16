@@ -4,9 +4,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-8 gap-11 lg:gap-0">
         <div class="col-span-1 lg:col-span-3">
           @unless ( empty( $contact['title'] ) )
-            <h2 class="contact-title">
+            <h1 class="contact-title">
               {!! $contact['title'] !!}
-            </h2>
+            </h1>
           @endunless
         </div>
 

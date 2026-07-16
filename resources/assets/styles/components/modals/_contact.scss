@@ -27,6 +27,8 @@
 
   .contact-title {
     @apply text-5xl mb-0;
+    
+    letter-spacing: -4px !important;
 
     @screen md {
       @apply text-7xl;

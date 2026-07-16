@@ -4,7 +4,7 @@
       @unless ( empty( $hero['hello_words'] ) )
         <div class="hello-words-wrapper"
             data-words="{{ implode( '||', $hero['hello_words'] ) }}">
-          <h2 class="hello-word-title"><span></span></h2>
+          <h1 class="hello-word-title"><span></span></h1>
         </div>
       @endunless
 
