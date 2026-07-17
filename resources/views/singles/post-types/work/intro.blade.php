@@ -91,7 +91,7 @@
           <div class="intro-client-name">{{ $intro['client_name'] }}</div>
         @endunless
         @unless ( empty( $intro['title'] ) )
-          <h3 class="mb-0">{{ $intro['title'] }}</h3>
+          <h1 class="mb-0 h3">{{ $intro['title'] }}</h1>
         @endunless
 
         @unless ( empty( $intro['description'] ) )
