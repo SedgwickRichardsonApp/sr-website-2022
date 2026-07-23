@@ -1,6 +1,10 @@
 .tpl-contact-hero {
   @apply py-20 md:py-40;
 
+  .hero-h1-title {
+    @apply mb-[25px] text-[16px] md:text-[22px] uppercase tracking-[-0.04rem];
+  }
+
   .hello-words-wrapper {
     @apply min-h-[20px] mb-[50px] mt-8 sm:mt-0;
 

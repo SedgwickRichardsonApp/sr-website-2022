@@ -3,15 +3,15 @@
     <div class="content-wrapper">
       <div class="hero-title-wrapper {{ $hero['slug'] === 'creating-value' ? 'cursor-link only-one' : ''}}">
         @unless ( empty( $hero['subtitle'] ) )
-          <h5 class="hero-subtitle">
+          <h1 class="hero-subtitle">
             {{ $hero['subtitle'] }}
-          </h5>
+          </h1>
         @endunless
 
         @unless ( empty( $hero['title'] ) )
-          <h1 class="hero-title">
+          <h2 class="hero-title">
             {{ $hero['title'] }}
-          </h1>
+          </h2>
         @endunless
       </div>
       @unless ( empty( $hero['animation_json_file'] ) )

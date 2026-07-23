@@ -5,6 +5,10 @@
     @apply pt-40 pb-[140px];
   }
 
+  .hero-h1-title {
+    @apply mb-[25px] text-[16px] md:text-[22px] uppercase tracking-[-0.04rem];
+  }
+
   .title {
     @apply mb-10 -tracking-[1.9px];
 

@@ -1,10 +1,11 @@
 <section class="tpl-contact-hero js-header-white">
   <div class="container-fluid">
     <div class="content-wrapper">
+      <h1 class="hero-h1-title">{!! $title !!}</h1>
       @unless ( empty( $hero['hello_words'] ) )
         <div class="hello-words-wrapper"
             data-words="{{ implode( '||', $hero['hello_words'] ) }}">
-          <h1 class="hello-word-title"><span></span></h1>
+          <h2 class="hello-word-title"><span></span></h2>
         </div>
       @endunless
 

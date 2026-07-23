@@ -3,9 +3,10 @@
     <div class="content-wrapper">
       <div class="hero-title-wrapper">
         @unless ( empty( $hero['title'] ) )
-          <h1 class="hero-title">
+          <h1 class="hero-h1-title">{!! $title !!}</h1>
+          <h2 class="hero-title">
             {!! $hero['title'] !!}
-          </h1>
+          </h2>
         @endunless
       </div>
 

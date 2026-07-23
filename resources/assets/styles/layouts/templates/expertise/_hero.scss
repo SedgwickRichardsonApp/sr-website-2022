@@ -22,7 +22,7 @@
   }
 
   .hero-subtitle {
-    @apply indent-[3px] text-grey-400 text-lg uppercase tracking-[-0.3px];
+    @apply mb-[25px] text-grey-400 text-[16px] md:text-[22px] uppercase tracking-[-0.04rem];
 
     line-height: 21px !important;
 

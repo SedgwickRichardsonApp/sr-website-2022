@@ -23,9 +23,11 @@ html.vi {
 
   /* About Page */
   .tpl-about-hero {
+    .hero-h1-title {
+      @apply mt-[160px] mb-[25px];
+    }
+
     .hero-title {
-      @apply mt-[160px];
-      
       @screen md {
         @apply text-[3.75rem];
       }

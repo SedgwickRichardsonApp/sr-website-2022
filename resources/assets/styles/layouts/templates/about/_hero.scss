@@ -13,8 +13,12 @@
     @apply relative z-10;
   }
 
+  .hero-h1-title {
+    @apply mt-[160px] mb-[25px] text-[16px] md:text-[22px] uppercase tracking-[-0.04rem];
+  }
+
   .hero-title {
-    @apply text-[2.9375rem] mb-0 mt-[160px] -tracking-[0.1175rem];
+    @apply text-[2.9375rem] mb-0 -tracking-[0.1175rem];
 
     line-height: 1.181489;
     transition: font-size 0.5s ease;

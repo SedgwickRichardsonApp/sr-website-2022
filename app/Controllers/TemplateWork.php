@@ -31,6 +31,10 @@ class TemplateWork extends Controller {
     return html_entity_decode( get_the_title() );
   }
 
+  public function the_title() {
+    return html_entity_decode( get_the_title() );
+  }
+
   public function sector_terms() {
     return get_post_type_terms( 'cpt_work_sector' );
   }

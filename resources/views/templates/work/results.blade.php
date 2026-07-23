@@ -1,9 +1,10 @@
 <section class="tpl-work-results js-header-white">
   <div class="container-fluid">
     @unless ( empty( $title ) )
-      <h1 class="title h2">
+      <h1 class="hero-h1-title">{!! get_the_title(get_queried_object_id()) !!}</h1>
+      <h2 class="title">
         {{ $title }}
-      </h1>
+      </h2>
     @endunless
 
     <div id="work-taxonomies-filter" class="work-taxonomies-filter-wrapper">

@@ -3,10 +3,11 @@
     <div class="contact-form-wrapper">
       <div class="grid grid-cols-1 lg:grid-cols-8 gap-11 lg:gap-0">
         <div class="col-span-1 lg:col-span-3">
+          <h1 class="hero-h1-title">{!! $title !!}</h1>
           @unless ( empty( $contact['title'] ) )
-            <h1 class="contact-title">
+            <h2 class="contact-title">
               {!! $contact['title'] !!}
-            </h1>
+            </h2>
           @endunless
         </div>
 
