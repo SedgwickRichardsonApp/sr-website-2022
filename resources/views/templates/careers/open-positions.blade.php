@@ -77,3 +77,19 @@
     </div>
   </div>
 </section>
+@if ( !empty(get_field( 'alert_message' )) )
+@php($lang = apply_filters('wpml_current_language', null))
+<section class="tpl-contact-alert">
+  <div cass="container-fluid alert-bg">
+    <div class="content-wrapper alert-message-wrapper">
+      <div>
+        <h4 class="alert-head">
+          {{ $lang === 'vi' ? 'CẢNH BÁO' : ( $lang === 'zh' ? '警惕' : __('Alert', 'sage')) }}
+        </h4>
+      </div>
+      <div class="alert-message">{!! get_field( 'alert_message' ) !!}</div>
+    </div>
+    </div>
+  </div>
+</section>
+@endif

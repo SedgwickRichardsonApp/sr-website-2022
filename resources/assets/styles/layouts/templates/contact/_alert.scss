@@ -1,0 +1,17 @@
+.tpl-contact-alert {
+  @apply py-[2.563rem] md:py-[33px] bg-secondary text-white-100;
+
+  @media (min-width: 839px) {
+    .content-wrapper {
+      @apply max-w-[79.8vw] mx-auto;
+    }
+  }
+
+  .alert-message-wrapper {
+    @apply flex flex-col md:flex-row max-w-[94vw] md:max-w-[79.8vw] w-full mx-auto;
+
+    .alert-head {
+      @apply pr-[5rem] text-[18px] font-bold;
+    }
+  }
+}
